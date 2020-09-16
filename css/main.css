@@ -81,7 +81,7 @@ body {
     height: 100%;
     padding: 0 5% 0 5%;
     scrollbar-width: none;
-    /*scroll-snap-type: y mandatory;*/
+    scroll-snap-type: y mandatory;
 }
 
 .content.proximity {
@@ -93,19 +93,19 @@ body {
     background: transparent;
 }
 
-/*.scrollTo {*/
-/*    scroll-snap-align: start;*/
-/*}*/
+.page {
+    min-height: calc(100vh);
+    height: fit-content;
+    padding-top: 10%;
+    scroll-snap-align: start;
+}
 
 .footer {
     margin-top: 10%;
 }
-
-
 /*  Header  */
 
 .header {
-    margin-top: 10%;
     height: fit-content;
 }
 
@@ -226,7 +226,6 @@ body {
 /*  Experience */
 
 .experience {
-    margin-top: 10%;
     align-items: center;
 }
 
@@ -317,7 +316,6 @@ body {
 /*  Skills */
 
 .skills {
-    margin-top: 10%;
     align-items: center;
 }
 
