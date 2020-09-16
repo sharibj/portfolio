@@ -51,12 +51,12 @@ Lightest to darkest
 
 .row {
     display: flex;
-    flex-direction: row;
+    flex-flow: row;
 }
 
 .column {
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
 }
 
 .table {
@@ -153,7 +153,7 @@ body {
     white-space: nowrap;
     overflow: hidden;
     -webkit-animation: type 2s steps(30, end);
-    animation: type 2s steps(30, end);
+    animation: type 0.7s steps(30, end);
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
     width: 100%;
@@ -161,44 +161,44 @@ body {
 }
 
 .introduction .console.effect-active p:nth-child(2) {
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
+    -webkit-animation-delay: 0.7s;
+    animation-delay: 0.7s;
 }
 
 .introduction .console.effect-active p:nth-child(3) {
-    -webkit-animation-delay: 2s;
-    animation-delay: 2s;
+    -webkit-animation-delay: 1.4s;
+    animation-delay: 1.4s;
 }
 
 .introduction .console.effect-active p:nth-child(4) {
-    -webkit-animation-delay: 3s;
-    animation-delay: 3s;
+    -webkit-animation-delay: 2.1s;
+    animation-delay: 2.1s;
 }
 
 .introduction .console.effect-active p:nth-child(5) {
-    -webkit-animation-delay: 4s;
-    animation-delay: 4s;
+    -webkit-animation-delay: 2.8s;
+    animation-delay: 2.8s;
 }
 
 .introduction .console.effect-active p:nth-child(6) {
-    -webkit-animation-delay: 5s;
-    animation-delay: 5s;
+    -webkit-animation-delay: 3.5s;
+    animation-delay: 3.5s;
 }
 
 .introduction .console.effect-active p:nth-child(7) {
-    -webkit-animation-delay: 6s;
-    animation-delay: 6s;
+    -webkit-animation-delay: 4.2s;
+    animation-delay: 4.2s;
 }
 
 .introduction .console.effect-active p:nth-child(8) {
-    -webkit-animation-delay: 7s;
-    animation-delay: 7s;
+    -webkit-animation-delay: 4.9s;
+    animation-delay: 4.9s;
 }
 
 .introduction .console.effect-active p:nth-child(8):after {
     content: "_";
-    opacity: 1;
-    animation: blink 1s infinite;
+    opacity: 0.7;
+    animation: blink 0.7s infinite;
 }
 
 .introduction .console p:nth-child(1):after {
@@ -243,11 +243,8 @@ body {
 }
 
 .experience .card._1.effect-active {
-    /* swing-in-right-bck */
-    margin-left: 10%;
-    -webkit-animation: swing-in-right-bck 2.2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
-    animation: swing-in-right-bck 2.2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
-    animation-delay: 0.2s;
+    margin-left: 5%;
+	transition: margin-left 1s ease-in 0.2s;
 }
 
 .experience .card._2 {
@@ -256,11 +253,8 @@ body {
 }
 
 .experience .card._2.effect-active {
-    /* swing-in-left-bck */
-    margin-right: 10%;
-    -webkit-animation: swing-in-left-bck 2.2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
-    animation: swing-in-left-bck 2.2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
-    animation-delay: 0.4s;
+    margin-right: 5%;
+	transition: margin-right 1s linear 0.4s;
 }
 
 .experience .card._3 {
@@ -269,11 +263,8 @@ body {
 }
 
 .experience .card._3.effect-active {
-    /* swing-in-right-bck */
-    margin-left: 10%;
-    -webkit-animation: swing-in-right-bck 2.2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
-    animation: swing-in-right-bck 2.2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
-    animation-delay: 0.6s;
+    margin-left: 5%;
+	transition: margin-left 1s ease-in 0.6s;
 }
 
 .experience .card img {
