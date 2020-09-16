@@ -1,0 +1,726 @@
+/*********************
+Color Scheme
+Lightest to darkest
+1 to 4
+*/
+
+.color1 {
+    color: var(--color1);
+}
+
+.color2 {
+    color: var(--color2);
+}
+
+.color3 {
+    color: var(--color3);
+}
+
+.color4 {
+    color: var(--color4);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.table {}
+
+
+/**********************/
+
+body {
+    margin: 0;
+}
+
+.body {
+    position: fixed;
+    bottom: 0%;
+    top: 0%;
+}
+
+.content {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100%;
+    padding: 0 5% 0 5%;
+    scrollbar-width: none;
+    scroll-snap-type: y mandatory;
+}
+
+.content.proximity {
+    scroll-snap-type: y proximity;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+.scrollTo {
+    scroll-snap-align: start;
+}
+
+.footer {
+    margin-top: 10%;
+}
+
+
+/*  Header  */
+
+.header {
+    margin-top: 10%;
+    height: fit-content;
+}
+
+.header img {
+    width: 40%;
+    padding-top: 2%;
+}
+
+.header img:hover {
+    -webkit-animation: vibrate-1 0.9s linear infinite both;
+    animation: vibrate-1 0.9s linear infinite both;
+}
+
+.header .title {
+    vertical-align: center;
+    margin-left: 10%;
+    align-self: center;
+}
+
+.header .title .lastname {
+    font-size: 72px;
+}
+
+.header .title .lastname:hover {
+    font-size: 78px;
+}
+
+.header .title .name {
+    font-size: 92px;
+}
+
+.header .title .name:hover {
+    font-size: 98px;
+}
+
+.header .title .role {
+    font-size: 38px;
+}
+
+.header .title .role:hover {
+    font-size: 44px;
+}
+
+
+/**********************/
+
+
+/*  Introduction    */
+
+.introduction {
+    margin-top: 10%;
+    align-items: center;
+}
+
+.introduction .title {
+    font-size: 92;
+}
+
+.introduction .subtitle {
+    font-size: 30;
+}
+
+.introduction .console {
+    width: 95%;
+    margin-top: 10%;
+    font-size: 22px;
+    background-color: var(--color4);
+    line-height: 110%;
+    padding-left: 5%;
+    border-radius: 1em;
+}
+
+.introduction .console:not(.effect-active) p {
+    display: none;
+}
+
+.introduction .console.effect-active p {
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-animation: type 2s steps(30, end);
+    animation: type 2s steps(30, end);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    width: 100%;
+    opacity: 0;
+}
+
+.introduction .console.effect-active p:nth-child(2) {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.introduction .console.effect-active p:nth-child(3) {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+.introduction .console.effect-active p:nth-child(4) {
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+}
+
+.introduction .console.effect-active p:nth-child(5) {
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+}
+
+.introduction .console.effect-active p:nth-child(5):after {
+    content: "_";
+    opacity: 1;
+    animation: blink 1s infinite;
+}
+
+.introduction .console.effect-active p:nth-child(1):after {
+    content: "_";
+    opacity: 0;
+    animation: fast-blink 1s;
+}
+
+@keyframes type {
+    0% {
+        width: 0;
+    }
+    1% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/**********************/
+
+
+/*  Experience */
+
+.experience {
+    margin-top: 10%;
+    align-items: center;
+}
+
+.experience .title {
+    font-size: 80;
+}
+
+.experience .card {
+    width: 100%;
+    height: fit-content;
+    padding: 5%;
+    margin-top: 10%;
+    background-color: var(--color4);
+}
+
+.experience .card._1 {
+    margin-left: 170%;
+    border-radius: 5em 0 0 5em;
+}
+
+.experience .card._1.effect-active {
+    /* swing-in-right-bck */
+    margin-left: 10%;
+    -webkit-animation: swing-in-right-bck 2.2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    animation: swing-in-right-bck 2.2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    animation-delay: 0.2s;
+}
+
+.experience .card._2 {
+    margin-right: 170%;
+    border-radius: 0 5em 5em 0;
+}
+
+.experience .card._2.effect-active {
+    /* swing-in-left-bck */
+    margin-right: 10%;
+    -webkit-animation: swing-in-left-bck 2.2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    animation: swing-in-left-bck 2.2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    animation-delay: 0.4s;
+}
+
+.experience .card._3 {
+    margin-left: 170%;
+    border-radius: 5em 0 0 5em;
+}
+
+.experience .card._3.effect-active {
+    /* swing-in-right-bck */
+    margin-left: 10%;
+    -webkit-animation: swing-in-right-bck 2.2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    animation: swing-in-right-bck 2.2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    animation-delay: 0.6s;
+}
+
+.experience .card img {
+    height: 10em;
+    width: 10em;
+}
+
+.experience .card._2 img {
+    margin-left: 10%;
+}
+
+.experience .card .column {
+    margin-left: 5%;
+    width: 100%;
+}
+
+.experience .card._2 .column {
+    margin-left: 25%;
+}
+
+.experience .card .column .company {
+    font-size: 50px;
+    margin-bottom: 1.5%;
+}
+
+.experience .card .column .role {
+    font-size: 35px;
+    margin-bottom: 1%;
+}
+
+.experience .card .column .meta {
+    font-size: 20pt;
+}
+
+.experience .card .column .location {
+    margin-left: 10%;
+}
+
+
+/**********************/
+
+
+/*  Skills */
+
+.skills {
+    margin-top: 10%;
+    align-items: center;
+}
+
+.skills .title {
+    font-size: 92;
+}
+
+.skill_bar {
+    align-items: center;
+    margin-top: 5%;
+    align-items: flex-end;
+}
+
+.skill_bar .column {
+    width: 100%;
+}
+
+.skill_bar .icon {
+    width: 10%;
+    margin-right: 2%;
+}
+
+.skill_bar .caption {
+    font-size: 30;
+    padding: 0% 2% 1% 2%;
+    justify-content: space-between;
+}
+
+.skill_bar .progress-bar-container {
+    width: 100%;
+    height: 1.4em;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    border-radius: 35px;
+    overflow: hidden;
+}
+
+.skill_bar .progress-bar-child {
+    width: 100%;
+    height: 100%;
+}
+
+.skill_bar .progress {
+    color: white;
+    text-align: center;
+    line-height: 75px;
+    font-size: 35px;
+    font-family: "Segoe UI";
+    animation-direction: reverse;
+    background: var(--color4);
+    width: 100%;
+    /* Chrome10-25,Safari5.1-6 */
+    /* background: linear-gradient(to right, #e5405e 0%, #ffdb3a 45%, #3fffa2 100%); */
+    background: linear-gradient(to right, var(--color4) 0%, var(--color3) 25%, var(--color2) 50%, var(--color1) 100%);
+}
+
+.skill_bar .shrinker {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+}
+
+.skill_bar .inverted {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.skill_bar ._100 {
+    width: 0%;
+}
+
+.skill_bar ._90 {
+    width: 10%;
+}
+
+.skill_bar ._80 {
+    width: 20%;
+}
+
+.skill_bar ._70 {
+    width: 30%;
+}
+
+.skill_bar ._60 {
+    width: 40%;
+}
+
+.skill_bar ._50 {
+    width: 50%;
+}
+
+.skill_bar.effect-active .timelapse {
+    animation-name: timelapse;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(.86, .05, .4, .96);
+}
+
+@keyframes timelapse {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+    }
+}
+
+@keyframes timelapse {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+    }
+}
+
+
+/**********************/
+
+
+/*  Effects */
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fast-blink {
+    0% {
+        opacity: 1;
+    }
+    10% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0;
+    }
+    99.9% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.text-focus-in {
+    -webkit-animation: text-focus-in 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-focus-in 0.8s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+.tracking-in-expand {
+    -webkit-animation: tracking-in-expand 1.4s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both;
+    animation: tracking-in-expand 1.4s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both;
+}
+
+@-webkit-keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes vibrate-1 {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+    20% {
+        -webkit-transform: translate(-2px, 2px);
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        -webkit-transform: translate(-2px, -2px);
+        transform: translate(-2px, -2px);
+    }
+    60% {
+        -webkit-transform: translate(2px, 2px);
+        transform: translate(2px, 2px);
+    }
+    80% {
+        -webkit-transform: translate(2px, -2px);
+        transform: translate(2px, -2px);
+    }
+    100% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+}
+
+@keyframes vibrate-1 {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+    20% {
+        -webkit-transform: translate(-2px, 2px);
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        -webkit-transform: translate(-2px, -2px);
+        transform: translate(-2px, -2px);
+    }
+    60% {
+        -webkit-transform: translate(2px, 2px);
+        transform: translate(2px, 2px);
+    }
+    80% {
+        -webkit-transform: translate(2px, -2px);
+        transform: translate(2px, -2px);
+    }
+    100% {
+        -webkit-transform: translate(0);
+        transform: translate(0);
+    }
+}
+
+.swing-in-right-bck {
+    -webkit-animation: swing-in-right-bck 0.6s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    animation: swing-in-right-bck 1.2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-9-9 10:14:33
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+
+/**
+ * ----------------------------------------
+ * animation swing-in-right-bck
+ * ----------------------------------------
+ */
+
+@-webkit-keyframes swing-in-right-bck {
+    0% {
+        -webkit-transform: translate(74%, 0);
+        transform: translate(74%, 0);
+        -webkit-transform-origin: right;
+        transform-origin: right;
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translate(5%, 0);
+        transform: translate(5%, 0);
+        -webkit-transform-origin: right;
+        transform-origin: right;
+        opacity: 1;
+    }
+}
+
+@keyframes swing-in-right-bck {
+    0% {
+        -webkit-transform: translate(74%, 0);
+        transform: translate(74%, 0);
+        -webkit-transform-origin: right;
+        transform-origin: right;
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translate(5%, 0);
+        transform: translate(5%, 0);
+        -webkit-transform-origin: right;
+        transform-origin: right;
+        opacity: 1;
+    }
+}
+
+.swing-in-left-bck {
+    -webkit-animation: swing-in-left-bck 0.6s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    animation: swing-in-left-bck 1.2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-9-9 10:14:54
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+
+/**
+ * ----------------------------------------
+ * animation swing-in-left-bck
+ * ----------------------------------------
+ */
+
+@-webkit-keyframes swing-in-left-bck {
+    0% {
+        -webkit-transform: translate(-74%, 0);
+        transform: translate(-74%, 0);
+        -webkit-transform-origin: left;
+        transform-origin: left;
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translate(-5%, 0);
+        transform: translate(-5%, 0);
+        -webkit-transform-origin: left;
+        transform-origin: left;
+        opacity: 1;
+    }
+}
+
+@keyframes swing-in-left-bck {
+    0% {
+        -webkit-transform: translate(-74%, 0);
+        transform: translate(-74%, 0);
+        -webkit-transform-origin: left;
+        transform-origin: left;
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translate(-5%, 0);
+        transform: translate(-5%, 0);
+        -webkit-transform-origin: left;
+        transform-origin: left;
+        opacity: 1;
+    }
+}
+
+
+/**********************/
