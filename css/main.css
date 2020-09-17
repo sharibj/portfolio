@@ -103,6 +103,9 @@ body {
 .footer {
     margin-top: 10%;
 }
+.title{
+	text-align: center;
+}
 /*  Header  */
 
 .header {
@@ -119,7 +122,7 @@ body {
     animation: vibrate-1 0.9s linear infinite both;
 }
 
-.header .title {
+.header .nametag {
     vertical-align: center;
     margin-left: 10%;
     align-self: center;
@@ -135,6 +138,9 @@ body {
     align-items: center;
 }
 
+.introduction .subtitle{
+	text-align: center;
+}
 .introduction .console {
     width: 95%;
     min-height: 20em;
