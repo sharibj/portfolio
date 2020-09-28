@@ -179,7 +179,7 @@ body {
 }
 
 .experience .card {
-    width: 100%;
+    width: 85vw;
     height: fit-content;
     padding: 5%;
     margin-top: 10%;
@@ -187,32 +187,32 @@ body {
 }
 
 .experience .card._1 {
-    margin-left: 170%;
+    margin-left: 165%;
     border-radius: 5em 0 0 5em;
 }
 
 .experience .card._1.effect-active {
-    margin-left: 5%;
+    margin-left: 10%;
     transition: margin-left 0.6s ease-in 0.2s;
 }
 
 .experience .card._2 {
-    margin-right: 170%;
+    margin-right: 165%;
     border-radius: 0 5em 5em 0;
 }
 
 .experience .card._2.effect-active {
-    margin-right: 5%;
-    transition: margin-right 0.6s linear 0.4s;
+    margin-right: 10%;
+    transition: margin-right 0.6s ease-in 0.4s;
 }
 
 .experience .card._3 {
-    margin-left: 170%;
+    margin-left: 165%;
     border-radius: 5em 0 0 5em;
 }
 
 .experience .card._3.effect-active {
-    margin-left: 5%;
+    margin-left: 10%;
     transition: margin-left 0.6s ease-in 0.6s;
 }
 
