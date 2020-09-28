@@ -28,21 +28,42 @@ function add_active_effect_class(element) {
 }
 
 function load_svg() {
-    const colorElements = document.querySelectorAll("[id$='_color']");
-    console.log(colorElements);
-    colorElements.forEach(setColorToElement)
+    load_svg_colors();
     const experienceFooter = document.getElementById('experience_footer');
     const workingSvg = document.getElementById('working_svg');
     experienceFooter.innerHTML = workingSvg.innerHTML;
+
+
+    const skillsFooter = document.getElementById('skills_footer');
+    const activitySvg = document.getElementById('activity_svg');
+    skillsFooter.innerHTML = activitySvg.innerHTML;
+}
+
+
+function load_svg_colors() {
+    const color1 = getComputedStyle(document.documentElement)
+        .getPropertyValue('--color1');
+    const color2 = getComputedStyle(document.documentElement)
+        .getPropertyValue('--color2');
+    const color3 = getComputedStyle(document.documentElement)
+        .getPropertyValue('--color3');
+    const color4 = getComputedStyle(document.documentElement)
+        .getPropertyValue('--color4');
+
+
+    document.querySelectorAll("[id$='_color1']").forEach(setColorToElement, color1);
+    document.querySelectorAll("[id$='_color2']").forEach(setColorToElement, color2);
+    console.log(document.querySelectorAll("[id$='_color2']"));
+    document.querySelectorAll("[id$='_color3']").forEach(setColorToElement, color3);
+    document.querySelectorAll("[id$='_color4']").forEach(setColorToElement, color4);
+
 }
 
 function setColorToElement(itemElement) {
-    const color2 = getComputedStyle(document.documentElement)
-        .getPropertyValue('--color2');
-    itemElement.style.fill = color2;
+    itemElement.style.fill = this;
     const children = itemElement.children;
     for (let i = 0; i < children.length; i++) {
         const child = children[i];
-        child.style.fill = color2;
+        child.style.fill = this;
     }
 }

@@ -157,7 +157,7 @@ body {
 }
 
 .introduction .console .inner {
-    padding: 5%;
+    margin: 5%;
     overflow: hidden;
     max-height: 0;
     height: fit-content;
@@ -249,11 +249,11 @@ body {
     margin-left: 10%;
 }
 
-.page._2 {
+.page {
     flex-flow: wrap;
 }
 
-#experience_footer {
+.svg_footer {
     transform: scale(1.3);
     width: 100%;
     text-align-last: center;
