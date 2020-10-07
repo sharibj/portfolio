@@ -173,10 +173,6 @@ body {
 
 
 /*  Experience */
-.stop-scrolling {
-    height: 100%;
-    overflow: hidden;
-}
 
 .experience {
     align-items: center;

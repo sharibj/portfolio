@@ -81,28 +81,54 @@ function setColorToElement(itemElement) {
 
 /******************************************************************************************************/
 
-function addClassName(selector, className){
-    console.log('addingClass');
+function addClassName(selector, className) {
     document.querySelector(selector).classList.add(className);
 }
-function removeClassName(selector, className){
+
+function removeClassName(selector, className) {
     document.querySelector(selector).classList.remove(className);
 }
 
-function showDetails(experienceNumber){
-    removeClassName('.experience .card._'+experienceNumber, 'hide')
-    removeClassName('.experience .details._'+experienceNumber, 'hide')
-    addClassName('.experience .card._'+experienceNumber, 'show')
-    addClassName('.experience .details._'+experienceNumber, 'show')
-    addClassName('body', 'stop-scrolling')
-    addClassName('.content', 'stop-scrolling')
+function showDetails(experienceNumber) {
+    removeClassName('.experience .card._' + experienceNumber, 'hide')
+    removeClassName('.experience .details._' + experienceNumber, 'hide')
+    addClassName('.experience .card._' + experienceNumber, 'show')
+    addClassName('.experience .details._' + experienceNumber, 'show')
+    disableScroll()
 }
 
-function hideDetails(experienceNumber){
-    addClassName('.experience .card._'+experienceNumber, 'hide')
-    addClassName('.experience .details._'+experienceNumber, 'hide')
-    removeClassName('.experience .card._'+experienceNumber, 'show')
-    removeClassName('.experience .details._'+experienceNumber, 'show')
-    removeClassName('body', 'stop-scrolling')
-    removeClassName('.content', 'stop-scrolling')
+function hideDetails(experienceNumber) {
+    addClassName('.experience .card._' + experienceNumber, 'hide')
+    addClassName('.experience .details._' + experienceNumber, 'hide')
+    removeClassName('.experience .card._' + experienceNumber, 'show')
+    removeClassName('.experience .details._' + experienceNumber, 'show')
+    enableScroll()
+}
+
+/**/
+function disableScroll() {
+    window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+    window.addEventListener('DOMMouseScroll', preventDefault, false);
+    window.addEventListener('wheel', preventDefault, {passive: false});
+    window.addEventListener('mousewheel', preventDefault, {passive: false});
+    window.addEventListener('touchmove', preventDefault, {passive: false});
+}
+
+function enableScroll() {
+    window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+    window.removeEventListener('DOMMouseScroll', preventDefault, false);
+    window.removeEventListener('wheel', preventDefault, {passive: false});
+    window.removeEventListener('mousewheel', preventDefault, {passive: false});
+    window.removeEventListener('touchmove', preventDefault, {passive: false});
+}
+
+function preventDefault(e) {
+    e.preventDefault();
+}
+
+function preventDefaultForScrollKeys(e) {
+    if (e.keyCode >= 32 && e.keyCode <= 40) {
+        preventDefault(e);
+        return false;
+    }
 }
