@@ -80,3 +80,29 @@ function setColorToElement(itemElement) {
 }
 
 /******************************************************************************************************/
+
+function addClassName(selector, className){
+    console.log('addingClass');
+    document.querySelector(selector).classList.add(className);
+}
+function removeClassName(selector, className){
+    document.querySelector(selector).classList.remove(className);
+}
+
+function showDetails(experienceNumber){
+    removeClassName('.experience .card._'+experienceNumber, 'hide')
+    removeClassName('.experience .details._'+experienceNumber, 'hide')
+    addClassName('.experience .card._'+experienceNumber, 'show')
+    addClassName('.experience .details._'+experienceNumber, 'show')
+    addClassName('body', 'stop-scrolling')
+    addClassName('.content', 'stop-scrolling')
+}
+
+function hideDetails(experienceNumber){
+    addClassName('.experience .card._'+experienceNumber, 'hide')
+    addClassName('.experience .details._'+experienceNumber, 'hide')
+    removeClassName('.experience .card._'+experienceNumber, 'show')
+    removeClassName('.experience .details._'+experienceNumber, 'show')
+    removeClassName('body', 'stop-scrolling')
+    removeClassName('.content', 'stop-scrolling')
+}
