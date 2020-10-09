@@ -17,7 +17,7 @@ window.onload = function () {
     enable_effects();
 }
 
-function bodyResized() {
+window.onresize = function () {
     [1, 2, 3].forEach(resetDetails)
 }
 

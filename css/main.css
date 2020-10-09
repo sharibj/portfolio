@@ -46,8 +46,8 @@ body {
     top: 0;
 }
 
-/*noinspection CssUnknownProperty*/
 .content {
+    background: url("../resources/svg/triangles.svg");
     overflow-y: scroll;
     overflow-x: hidden;
     height: 100%;

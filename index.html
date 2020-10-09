@@ -8,12 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 
-<Body onresize="bodyResized()">
+<Body>
 <div class="body">
     <div class="content" onscroll="contentScrolled()">
         <div class="page _1 column">
             <div class="header row effect">
-                <img src="resources/profile.png" alt="Profile Photo" class="text-focus-in">
+                <img src="resources/img/profile.png" alt="Profile Photo" class="text-focus-in">
                 <div class="nametag column">
                     <div class="lastname color2 text-focus-in">JAFARI</div>
                     <div class="name color2 text-focus-in">SHARIB</div>
@@ -24,12 +24,7 @@
                 <div class="title color2">WHO AM I</div>
                 <div class="subtitle color4">Software craftsman with 7 Years of experience</div>
                 <div class="console color1">
-                    <div class="inner effect">
-                        &#8227;&nbsp;Proficient in programming with Java/J2EE<br/>
-                        &#8227;&nbsp;Adheres to SOLID principles and Design Patterns<br/>
-                        &#8227;&nbsp;Excellent analytical, problem-solving and interpersonal skills<br/>
-                        &#8227;&nbsp;Quick learner. Worked on many new/old technologies on need basis
-                    </div>
+                    <div class="inner effect" include-resource="resources/html/console.html"></div>
                 </div>
             </div>
         </div>
@@ -38,173 +33,129 @@
                 <div class=" title color4">WORK EXPERIENCE</div>
                 <div class="row card-container">
                     <div class="card row _1 effect" onclick="showDetails('1')">
-                        <img alt="Hexad Logo" src="resources/hexad.png " class="left ">
-                        <div class="column ">
-                            <div class="company color2 ">Hexad GmbH</div>
+                        <img alt="Hexad Logo" src="resources/img/hexad.png" class="left">
+                        <div class="column">
+                            <div class="company color2">Hexad GmbH</div>
                             <div class="role color2">Developer</div>
                             <div class="meta row row">
-                                <div class="duration color1 ">02/2020 - Present</div>
-                                <div class="location color1 ">Berlin, Germany</div>
+                                <div class="duration color1">02/2020 - Present</div>
+                                <div class="location color1">Berlin, Germany</div>
                             </div>
                         </div>
                     </div>
                     <div class="details _1" onclick="hideDetails('1')">
-                        <div class="responsibilities color1">
-                            <ul>
-                                <li>will be added soon</li>
-                            </ul>
-                        </div>
+                        <div class="responsibilities color1"
+                             include-resource="resources/html/hexad-details.html"></div>
                     </div>
                 </div>
                 <div class="row card-container">
                     <div class="card row _2 effect" onclick="showDetails('2')">
-                        <div class="column ">
+                        <div class="column">
                             <div class="company color2">Coriolis Technologies</div>
                             <div class="role color2">Member of Technical Staff</div>
                             <div class="meta row">
-                                <div class="duration color1 ">09/2015 - 02/2020</div>
-                                <div class="location color1 ">Pune, India</div>
+                                <div class="duration color1">09/2015 - 02/2020</div>
+                                <div class="location color1">Pune, India</div>
                             </div>
                         </div>
-                        <img alt="Coriolis Logo" src="resources/coriolis.png " class="left ">
+                        <img alt="Coriolis Logo" src="resources/img/coriolis.png" class="left">
                     </div>
                     <div class="details _2" onclick="hideDetails('2')">
-                        <div class="responsibilities color1">
-                            <ul>
-                                <li>Adding/Modifying code to implement new features and to resolve existing bugs using
-                                    core Java, Spring and Hibernate.
-                                </li>
-                                <li>Using Liquibase to change the database structure/values with the help of
-                                    Create/Update queries or Procedures.
-                                </li>
-                                <li>Adding new GUI components to the management console using Apache Wicket in Java</li>
-                                <li>Using essential HTML, CSS, JavaScript and AJAX knowledge to create GUI for a user
-                                    flow that is separate from the actual appliance and can be served from an individual
-                                    docbase.
-                                </li>
-                                <li>Writing and exposing new APIs using Jersey (JAX-RS). (Next version of the product
-                                    uses SpringBoot for this purpose)
-                                </li>
-                                <li>Creating Java services as well as Perl/Shell scripts that will be consumed by the
-                                    API to perform firewall/system configurations.
-                                </li>
-                                <li>Understanding customer requirements and quickly translating it to a working
-                                    PoC/Prototype in order to facilitate feasibility check and effort estimations.
-                                </li>
-                                <li>Creating demo videos and presentations for new features using basic video/photo
-                                    editing skills and delivering them to support teams and customers.
-                                </li>
-                                <li>Planning sprints while working in parallel on customer escalations, QA bugs and new
-                                    features.
-                                </li>
-                                <li>Identifying limitations and/or scope for improvements in the existing system and
-                                    proposing a solution.
-                                </li>
-                            </ul>
-                        </div>
+                        <div class="responsibilities color1"
+                             include-resource="resources/html/coriolis-details.html"></div>
                     </div>
                 </div>
                 <div class="row card-container">
                     <div class="card row _3 effect" onclick="showDetails('3'); disableScroll()">
-                        <img alt="Cognizant Logo" src="resources/cognizant.png " class="left ">
-                        <div class="column ">
+                        <img alt="Cognizant Logo" src="resources/img/cognizant.png" class="left">
+                        <div class="column">
                             <div class="company color2">Cognizant Technology</div>
                             <div class="role color2">Programmer Analyst</div>
                             <div class="meta row">
-                                <div class="duration color1 ">08/2013 - 08/2015</div>
-                                <div class="location color1 ">Kolkata, India</div>
+                                <div class="duration color1">08/2013 - 08/2015</div>
+                                <div class="location color1">Kolkata, India</div>
                             </div>
                         </div>
                     </div>
                     <div class="details _3" onclick="hideDetails('3'); enableScroll()">
-                        <div class="responsibilities color1">
-                            <ul>
-                                <li>Designing and implementing automated solutions to replace manual processes.</li>
-                                <li>Analyzing existing code to identify potential enhancements and engineering solutions
-                                    around it.
-                                </li>
-                                <li>Creating SQL procedures and triggers</li>
-                                <li>Maintaining the product by analyzing and resolving bugs as a backend Java
-                                    developer.
-                                </li>
-                            </ul>
-                        </div>
+                        <div class="responsibilities color1"
+                             include-resource="resources/html/cognizant-details.html"></div>
                     </div>
                 </div>
             </div>
             <div id="experience_footer" class="svg_footer" include-resource="resources/svg/working.svg"></div>
         </div>
         <div class="page _3 column">
-            <div class=" skills column ">
+            <div class=" skills column">
                 <div class="title color2">SKILLS</div>
-                <div class="table ">
+                <div class="table">
                     <div class="skill_bar row effect">
-                        <img alt="Java Logo" class="icon " src="resources/java.png ">
-                        <div class="column ">
+                        <img alt="Java Logo" class="icon" src="resources/img/java.png">
+                        <div class="column">
                             <div class="caption row">
-                                <div class="name color4 ">Java</div>
-                                <div class="percentage color4 ">90%</div>
+                                <div class="name color4">Java</div>
+                                <div class="percentage color4">90%</div>
                             </div>
-                            <div class="progress-bar-container ">
-                                <div class="progress-bar-child progress "></div>
-                                <div class="progress-bar-child shrinker timelapse "></div>
-                                <div class="progress-bar-child inverted _90 "></div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-child progress"></div>
+                                <div class="progress-bar-child shrinker timelapse"></div>
+                                <div class="progress-bar-child inverted _90"></div>
                             </div>
                         </div>
                     </div>
                     <div class="skill_bar row effect">
-                        <img alt="Kotlin Logo" class="icon " src="resources/kotlin.png ">
-                        <div class="column ">
+                        <img alt="Kotlin Logo" class="icon" src="resources/img/kotlin.png">
+                        <div class="column">
                             <div class="caption row">
-                                <div class="name color4 ">Kotlin</div>
-                                <div class="percentage color4 ">70%</div>
+                                <div class="name color4">Kotlin</div>
+                                <div class="percentage color4">70%</div>
                             </div>
-                            <div class="progress-bar-container ">
-                                <div class="progress-bar-child progress "></div>
-                                <div class="progress-bar-child shrinker timelapse "></div>
-                                <div class="progress-bar-child inverted _70 "></div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-child progress"></div>
+                                <div class="progress-bar-child shrinker timelapse"></div>
+                                <div class="progress-bar-child inverted _70"></div>
                             </div>
                         </div>
                     </div>
                     <div class="skill_bar row effect">
-                        <img alt="Angular Logo" class="icon " src="resources/angular.png ">
-                        <div class="column ">
+                        <img alt="Angular Logo" class="icon" src="resources/img/angular.png">
+                        <div class="column">
                             <div class="caption row">
-                                <div class="name color4 ">Angular</div>
-                                <div class="percentage color4 ">60%</div>
+                                <div class="name color4">Angular</div>
+                                <div class="percentage color4">60%</div>
                             </div>
-                            <div class="progress-bar-container ">
-                                <div class="progress-bar-child progress "></div>
-                                <div class="progress-bar-child shrinker timelapse "></div>
-                                <div class="progress-bar-child inverted _60 "></div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-child progress"></div>
+                                <div class="progress-bar-child shrinker timelapse"></div>
+                                <div class="progress-bar-child inverted _60"></div>
                             </div>
                         </div>
                     </div>
                     <div class="skill_bar row effect">
-                        <img alt="Spring Boot Logo" class="icon " src="resources/sprinBoot.png ">
-                        <div class="column ">
+                        <img alt="Spring Boot Logo" class="icon" src="resources/img/sprinBoot.png">
+                        <div class="column">
                             <div class="caption row">
-                                <div class="name color4 ">Spring Boot</div>
-                                <div class="percentage color4 ">80%</div>
+                                <div class="name color4">Spring Boot</div>
+                                <div class="percentage color4">80%</div>
                             </div>
-                            <div class="progress-bar-container ">
-                                <div class="progress-bar-child progress "></div>
-                                <div class="progress-bar-child shrinker timelapse "></div>
-                                <div class="progress-bar-child inverted _80 "></div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-child progress"></div>
+                                <div class="progress-bar-child shrinker timelapse"></div>
+                                <div class="progress-bar-child inverted _80"></div>
                             </div>
                         </div>
                     </div>
                     <div class="skill_bar row effect">
-                        <img alt="TDD Logo" class="icon " src="resources/tdd.png ">
-                        <div class="column ">
+                        <img alt="TDD Logo" class="icon" src="resources/img/tdd.png">
+                        <div class="column">
                             <div class="caption row">
-                                <div class="name color4 ">TDD</div>
-                                <div class="percentage color4 ">90%</div>
+                                <div class="name color4">TDD</div>
+                                <div class="percentage color4">90%</div>
                             </div>
-                            <div class="progress-bar-container ">
-                                <div class="progress-bar-child progress "></div>
-                                <div class="progress-bar-child shrinker timelapse "></div>
-                                <div class="progress-bar-child inverted _90 "></div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-child progress"></div>
+                                <div class="progress-bar-child shrinker timelapse"></div>
+                                <div class="progress-bar-child inverted _90"></div>
                             </div>
                         </div>
                     </div>
@@ -212,7 +163,7 @@
             </div>
             <div id="skills_footer" class="svg_footer" include-resource="resources/svg/activity.svg"></div>
         </div>
-        <div class="footer "></div>
+        <div class="footer"></div>
     </div>
 </div>
 <div class="wip color4">
