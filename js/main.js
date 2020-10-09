@@ -17,6 +17,10 @@ window.onload = function () {
     enable_effects();
 }
 
+function bodyResized() {
+    [1, 2, 3].forEach(resetDetails)
+}
+
 /*  Scroll Throttle and enable effects only when item is scrolled into view completely  */
 let scrollCount = 0;
 const scrollThrottleCount = 25;
@@ -105,6 +109,14 @@ function hideDetails(experienceNumber) {
     enableScrollUsingKeys()
 }
 
+function resetDetails(experienceNumber) {
+    removeClassName('.experience .card._' + experienceNumber, 'hide')
+    removeClassName('.experience .details._' + experienceNumber, 'hide')
+    removeClassName('.experience .card._' + experienceNumber, 'show')
+    removeClassName('.experience .details._' + experienceNumber, 'show')
+    enableScrollUsingKeys()
+}
+
 /**/
 function disableScrollUsingKeys() {
     window.addEventListener('keydown', preventDefaultForScrollKeys, false);
@@ -121,6 +133,7 @@ function disableScroll() {
 function enableScrollUsingKeys() {
     window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
 }
+
 function enableScroll() {
     enableScrollUsingKeys()
     window.removeEventListener('DOMMouseScroll', preventDefault, false);

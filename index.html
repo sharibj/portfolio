@@ -2,26 +2,28 @@
     <title>Sharib Jafari Portfolio</title>
     <script src="js/main.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/viewports.css">
     <link rel="stylesheet" type="text/css" href="css/theme.css">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 
-<Body>
+<Body onresize="bodyResized()">
 <div class="body">
     <div class="content" onscroll="contentScrolled()">
         <div class="page _1 column">
             <div class="header row effect">
                 <img src="resources/profile.png" alt="Profile Photo" class="text-focus-in">
                 <div class="nametag column">
-                    <div class="lastname color2 text-focus-in l">JAFARI</div>
-                    <div class="name color2 text-focus-in xl">SHARIB</div>
-                    <div class="role color1 text-focus-in m    ">Developer</div>
+                    <div class="lastname color2 text-focus-in">JAFARI</div>
+                    <div class="name color2 text-focus-in">SHARIB</div>
+                    <div class="role color1 text-focus-in">Developer</div>
                 </div>
             </div>
             <div class="introduction column">
-                <div class="title color2 xl">WHO AM I</div>
-                <div class="subtitle color4 s">Software craftsman with 7 Years of experience</div>
-                <div class="console color1 xs">
+                <div class="title color2">WHO AM I</div>
+                <div class="subtitle color4">Software craftsman with 7 Years of experience</div>
+                <div class="console color1">
                     <div class="inner effect">
                         &#8227;&nbsp;Proficient in programming with Java/J2EE<br/>
                         &#8227;&nbsp;Adheres to SOLID principles and Design Patterns<br/>
@@ -33,24 +35,23 @@
         </div>
         <div class="page _2 column">
             <div class="experience column">
-                <div class=" title color4 l">WORK EXPERIENCE</div>
+                <div class=" title color4">WORK EXPERIENCE</div>
                 <div class="row card-container">
                     <div class="card row _1 effect" onclick="showDetails('1')">
                         <img alt="Hexad Logo" src="resources/hexad.png " class="left ">
                         <div class="column ">
-                            <div class="company color2 m">Hexad GmbH</div>
-                            <div class="role color2 s">Developer</div>
-                            <div class="meta row row xs">
+                            <div class="company color2 ">Hexad GmbH</div>
+                            <div class="role color2">Developer</div>
+                            <div class="meta row row">
                                 <div class="duration color1 ">02/2020 - Present</div>
                                 <div class="location color1 ">Berlin, Germany</div>
                             </div>
                         </div>
                     </div>
                     <div class="details _1" onclick="hideDetails('1')">
-                        <div class="responsibilities color1 s">
+                        <div class="responsibilities color1">
                             <ul>
-                                <li></li>
-                                <li></li>
+                                <li>will be added soon</li>
                             </ul>
                         </div>
                     </div>
@@ -58,9 +59,9 @@
                 <div class="row card-container">
                     <div class="card row _2 effect" onclick="showDetails('2')">
                         <div class="column ">
-                            <div class="company color2 m">Coriolis Technologies</div>
-                            <div class="role color2 s">Member of Technical Staff</div>
-                            <div class="meta row xs">
+                            <div class="company color2">Coriolis Technologies</div>
+                            <div class="role color2">Member of Technical Staff</div>
+                            <div class="meta row">
                                 <div class="duration color1 ">09/2015 - 02/2020</div>
                                 <div class="location color1 ">Pune, India</div>
                             </div>
@@ -68,7 +69,7 @@
                         <img alt="Coriolis Logo" src="resources/coriolis.png " class="left ">
                     </div>
                     <div class="details _2" onclick="hideDetails('2')">
-                        <div class="responsibilities color1 s">
+                        <div class="responsibilities color1">
                             <ul>
                                 <li>Adding/Modifying code to implement new features and to resolve existing bugs using
                                     core Java, Spring and Hibernate.
@@ -107,16 +108,16 @@
                     <div class="card row _3 effect" onclick="showDetails('3'); disableScroll()">
                         <img alt="Cognizant Logo" src="resources/cognizant.png " class="left ">
                         <div class="column ">
-                            <div class="company color2 m">Cognizant Technology</div>
-                            <div class="role color2 s">Programmer Analyst</div>
-                            <div class="meta row xs">
+                            <div class="company color2">Cognizant Technology</div>
+                            <div class="role color2">Programmer Analyst</div>
+                            <div class="meta row">
                                 <div class="duration color1 ">08/2013 - 08/2015</div>
                                 <div class="location color1 ">Kolkata, India</div>
                             </div>
                         </div>
                     </div>
                     <div class="details _3" onclick="hideDetails('3'); enableScroll()">
-                        <div class="responsibilities color1 s">
+                        <div class="responsibilities color1">
                             <ul>
                                 <li>Designing and implementing automated solutions to replace manual processes.</li>
                                 <li>Analyzing existing code to identify potential enhancements and engineering solutions
@@ -135,12 +136,12 @@
         </div>
         <div class="page _3 column">
             <div class=" skills column ">
-                <div class="title color2 xl">SKILLS</div>
+                <div class="title color2">SKILLS</div>
                 <div class="table ">
                     <div class="skill_bar row effect">
                         <img alt="Java Logo" class="icon " src="resources/java.png ">
                         <div class="column ">
-                            <div class="caption row s">
+                            <div class="caption row">
                                 <div class="name color4 ">Java</div>
                                 <div class="percentage color4 ">90%</div>
                             </div>
@@ -154,7 +155,7 @@
                     <div class="skill_bar row effect">
                         <img alt="Kotlin Logo" class="icon " src="resources/kotlin.png ">
                         <div class="column ">
-                            <div class="caption row s">
+                            <div class="caption row">
                                 <div class="name color4 ">Kotlin</div>
                                 <div class="percentage color4 ">70%</div>
                             </div>
@@ -168,7 +169,7 @@
                     <div class="skill_bar row effect">
                         <img alt="Angular Logo" class="icon " src="resources/angular.png ">
                         <div class="column ">
-                            <div class="caption row s">
+                            <div class="caption row">
                                 <div class="name color4 ">Angular</div>
                                 <div class="percentage color4 ">60%</div>
                             </div>
@@ -182,7 +183,7 @@
                     <div class="skill_bar row effect">
                         <img alt="Spring Boot Logo" class="icon " src="resources/sprinBoot.png ">
                         <div class="column ">
-                            <div class="caption row s">
+                            <div class="caption row">
                                 <div class="name color4 ">Spring Boot</div>
                                 <div class="percentage color4 ">80%</div>
                             </div>
@@ -196,7 +197,7 @@
                     <div class="skill_bar row effect">
                         <img alt="TDD Logo" class="icon " src="resources/tdd.png ">
                         <div class="column ">
-                            <div class="caption row s">
+                            <div class="caption row">
                                 <div class="name color4 ">TDD</div>
                                 <div class="percentage color4 ">90%</div>
                             </div>
@@ -214,7 +215,7 @@
         <div class="footer "></div>
     </div>
 </div>
-<div class="wip xxl color4">
+<div class="wip color4">
     <span>WORK IN PROGRESS</span>
 </div>
 </Body>
