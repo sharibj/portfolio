@@ -104,7 +104,17 @@ body {
 .footer {
     margin-top: 10%;
 }
-
+.wip {
+    position: absolute;
+    height: 60vh;
+    padding-top: 40vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, .7);
+    z-index: 100;
+    text-align: center;
+    display: none;
+}
 .title {
     text-align: center;
 }
@@ -245,13 +255,14 @@ body {
 .experience .details {
     position: absolute;
     width: 100vw;
-    height: 85vh;
+    height: 90vh;
+    padding: 5vh 0 5vh 0;
     top: 0;
     right: -100%;
     background-color: var(--color4);
     border-radius: 5em;
     cursor: hand;
-    z-index: 1;
+    z-index: 3;
 }
 
 .experience .details.show {
@@ -268,7 +279,9 @@ body {
     right: unset;
     left: -100%;
 }
-
+.experience .details._3 {
+    z-index: 1;
+}
 .experience .details._2.show {
     left: 0;
     transition: left 0.4s linear 0s;
@@ -279,6 +292,16 @@ body {
     transition: left 0.6s ease-in 0.0s;
 }
 
+.experience .responsibilities{
+    width: 90%;
+    height: 100%;
+    padding: 0 5% 0 5%;
+    white-space: pre-line;
+    overflow-y: auto;
+}
+.experience .responsibilities ul{
+    margin: 0;
+}
 .experience .card img {
     height: 10em;
     width: 10em;

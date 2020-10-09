@@ -94,7 +94,7 @@ function showDetails(experienceNumber) {
     removeClassName('.experience .details._' + experienceNumber, 'hide')
     addClassName('.experience .card._' + experienceNumber, 'show')
     addClassName('.experience .details._' + experienceNumber, 'show')
-    disableScroll()
+    disableScrollUsingKeys()
 }
 
 function hideDetails(experienceNumber) {
@@ -102,20 +102,27 @@ function hideDetails(experienceNumber) {
     addClassName('.experience .details._' + experienceNumber, 'hide')
     removeClassName('.experience .card._' + experienceNumber, 'show')
     removeClassName('.experience .details._' + experienceNumber, 'show')
-    enableScroll()
+    enableScrollUsingKeys()
 }
 
 /**/
-function disableScroll() {
+function disableScrollUsingKeys() {
     window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+}
+
+function disableScroll() {
+    disableScrollUsingKeys()
     window.addEventListener('DOMMouseScroll', preventDefault, false);
     window.addEventListener('wheel', preventDefault, {passive: false});
     window.addEventListener('mousewheel', preventDefault, {passive: false});
     window.addEventListener('touchmove', preventDefault, {passive: false});
 }
 
-function enableScroll() {
+function enableScrollUsingKeys() {
     window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+}
+function enableScroll() {
+    enableScrollUsingKeys()
     window.removeEventListener('DOMMouseScroll', preventDefault, false);
     window.removeEventListener('wheel', preventDefault, {passive: false});
     window.removeEventListener('mousewheel', preventDefault, {passive: false});
