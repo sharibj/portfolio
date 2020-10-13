@@ -99,6 +99,7 @@ function showDetails(experienceNumber) {
     addClassName('.experience .card._' + experienceNumber, 'show')
     addClassName('.experience .details._' + experienceNumber, 'show')
     disableScrollUsingKeys()
+    configureArrowVisibility(document.querySelector(".details._2 .responsibilities"));
 }
 
 function hideDetails(experienceNumber) {
@@ -150,5 +151,21 @@ function preventDefaultForScrollKeys(e) {
     if (e.keyCode >= 32 && e.keyCode <= 40) {
         preventDefault(e);
         return false;
+    }
+}
+
+function configureArrowVisibility(elem) {
+    const maxTop = elem.scrollHeight - elem.offsetHeight;
+    const scrollTop = elem.scrollTop;
+    if (scrollTop === maxTop) {
+        elem.parentElement.children[2].setAttribute('style', 'display: none;')
+    }else{
+        elem.parentElement.children[2].setAttribute('style', 'display: unset;')
+    }
+    if (scrollTop === 0) {
+        elem.parentElement.children[0].setAttribute('style', 'display: none;')
+    }else{
+        elem.parentElement.children[0].setAttribute('style', 'display: unset;')
+
     }
 }

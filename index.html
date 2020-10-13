@@ -33,6 +33,7 @@
                 <div class=" title color4">WORK EXPERIENCE</div>
                 <div class="row card-container">
                     <div class="card row _1 effect" onclick="showDetails('1')">
+                        <i class="arrow left"></i>
                         <img alt="Hexad Logo" src="resources/img/hexad.png" class="left">
                         <div class="column">
                             <div class="company color2">Hexad GmbH</div>
@@ -59,14 +60,20 @@
                             </div>
                         </div>
                         <img alt="Coriolis Logo" src="resources/img/coriolis.png" class="left">
+                        <i class="arrow right"></i>
                     </div>
                     <div class="details _2" onclick="hideDetails('2')">
+                        <i class="arrow up"></i>
                         <div class="responsibilities color1"
+                             onscroll="configureArrowVisibility(this)"
+                             onresize="configureArrowVisibility(this)"
                              include-resource="resources/html/coriolis-details.html"></div>
+                        <i class="arrow down"></i>
                     </div>
                 </div>
                 <div class="row card-container">
                     <div class="card row _3 effect" onclick="showDetails('3'); disableScroll()">
+                        <i class="arrow left"></i>
                         <img alt="Cognizant Logo" src="resources/img/cognizant.png" class="left">
                         <div class="column">
                             <div class="company color2">Cognizant Technology</div>

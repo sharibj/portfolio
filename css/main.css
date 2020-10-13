@@ -345,6 +345,9 @@ body {
     margin-left: 16vw;
 }
 
+.experience .card._1 .column .location {
+    margin-left: 13vw;
+}
 .page {
     display: flex;
     align-content: flex-start;
@@ -359,6 +362,41 @@ body {
     margin-top: 4vh;
     text-align-last: center;
     z-index: 2;
+}
+
+.arrow {
+    border: solid var(--color1);
+    border-width: 0 0.8vw 0.8vw 0;
+    display: inline-block;
+    padding: 1.6vw;
+    position: relative;
+}
+
+.arrow.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    right: -1vw;
+}
+
+.arrow.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    left: -1vw;
+}
+.arrow.up {
+    position: absolute;
+    left: 47vw;
+    top: 1vh;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.arrow.down {
+    position: absolute;
+    left: 47vw;
+    bottom: 1vh;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
 }
 
 /**********************/
