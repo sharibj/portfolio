@@ -11,14 +11,17 @@ function initialise() {
         .getPropertyValue('--color4');
 }
 
-window.onload = function () {
-    initialise();
-    includeResources();
-    enable_effects();
-}
+window.onload = pageLoad
 
 window.onresize = function () {
     [1, 2, 3].forEach(resetDetails)
+}
+
+function pageLoad() {
+    initialise();
+    includeResources();
+    disable_effects();
+    enable_effects();
 }
 
 /*  Scroll Throttle and enable effects only when item is scrolled into view completely  */
@@ -32,6 +35,16 @@ function contentScrolled() {
         scrollCount = 0;
     }
 }
+
+function disable_effects() {
+    const elements = document.querySelectorAll('.effect.effect-active');
+    elements.forEach(remove_active_effect_class);
+}
+
+function remove_active_effect_class(element) {
+    element.classList.remove("effect-active");
+}
+
 
 function enable_effects() {
     const elements = document.querySelectorAll('.effect:not(.effect-active)');
@@ -94,28 +107,29 @@ function removeClassName(selector, className) {
 }
 
 function showDetails(experienceNumber) {
-    removeClassName('.experience .card._' + experienceNumber, 'hide')
-    removeClassName('.experience .details._' + experienceNumber, 'hide')
-    addClassName('.experience .card._' + experienceNumber, 'show')
-    addClassName('.experience .details._' + experienceNumber, 'show')
-    disableScrollUsingKeys()
+    removeClassName('.experience .card._' + experienceNumber, 'hide');
+    removeClassName('.experience .details._' + experienceNumber, 'hide');
+    addClassName('.experience .card._' + experienceNumber, 'show');
+    addClassName('.experience .details._' + experienceNumber, 'show');
+    disableScrollUsingKeys();
     configureArrowVisibility(document.querySelector(".details._2 .responsibilities"));
 }
 
 function hideDetails(experienceNumber) {
-    addClassName('.experience .card._' + experienceNumber, 'hide')
-    addClassName('.experience .details._' + experienceNumber, 'hide')
-    removeClassName('.experience .card._' + experienceNumber, 'show')
-    removeClassName('.experience .details._' + experienceNumber, 'show')
-    enableScrollUsingKeys()
+    addClassName('.experience .card._' + experienceNumber, 'hide');
+    addClassName('.experience .details._' + experienceNumber, 'hide');
+    removeClassName('.experience .card._' + experienceNumber, 'show');
+    removeClassName('.experience .details._' + experienceNumber, 'show');
+    enableScrollUsingKeys();
 }
 
 function resetDetails(experienceNumber) {
-    removeClassName('.experience .card._' + experienceNumber, 'hide')
-    removeClassName('.experience .details._' + experienceNumber, 'hide')
-    removeClassName('.experience .card._' + experienceNumber, 'show')
-    removeClassName('.experience .details._' + experienceNumber, 'show')
-    enableScrollUsingKeys()
+    removeClassName('.experience .card._' + experienceNumber, 'hide');
+    removeClassName('.experience .details._' + experienceNumber, 'hide');
+    removeClassName('.experience .card._' + experienceNumber, 'show');
+    removeClassName('.experience .details._' + experienceNumber, 'show');
+    enableScrollUsingKeys();
+    pageLoad();
 }
 
 /**/
@@ -159,12 +173,12 @@ function configureArrowVisibility(elem) {
     const scrollTop = elem.scrollTop;
     if (scrollTop === maxTop) {
         elem.parentElement.children[2].setAttribute('style', 'display: none;')
-    }else{
+    } else {
         elem.parentElement.children[2].setAttribute('style', 'display: unset;')
     }
     if (scrollTop === 0) {
         elem.parentElement.children[0].setAttribute('style', 'display: none;')
-    }else{
+    } else {
         elem.parentElement.children[0].setAttribute('style', 'display: unset;')
 
     }
