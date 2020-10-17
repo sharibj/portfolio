@@ -11,16 +11,17 @@ function initialise() {
         .getPropertyValue('--color4');
 }
 
-window.onload = pageLoad
+window.onload = pageLoad;
 
 window.onresize = function () {
-    [1, 2, 3].forEach(resetDetails)
-}
+    [1, 2, 3].forEach(resetDetails);
+    reset_effects();
+};
 
 function pageLoad() {
     initialise();
     includeResources();
-    disable_effects();
+    reset_effects();
     enable_effects();
 }
 
@@ -36,7 +37,7 @@ function contentScrolled() {
     }
 }
 
-function disable_effects() {
+function reset_effects() {
     const elements = document.querySelectorAll('.effect.effect-active');
     elements.forEach(remove_active_effect_class);
 }
@@ -75,7 +76,7 @@ function copyResourceToElement(element) {
             element.innerHTML = client.responseText;
             element.removeAttribute("include-resource");
             loadSvgColors();
-        }
+        };
         client.send();
     }
 }
@@ -129,7 +130,6 @@ function resetDetails(experienceNumber) {
     removeClassName('.experience .card._' + experienceNumber, 'show');
     removeClassName('.experience .details._' + experienceNumber, 'show');
     enableScrollUsingKeys();
-    pageLoad();
 }
 
 /**/
@@ -138,7 +138,7 @@ function disableScrollUsingKeys() {
 }
 
 function disableScroll() {
-    disableScrollUsingKeys()
+    disableScrollUsingKeys();
     window.addEventListener('DOMMouseScroll', preventDefault, false);
     window.addEventListener('wheel', preventDefault, {passive: false});
     window.addEventListener('mousewheel', preventDefault, {passive: false});
@@ -150,7 +150,7 @@ function enableScrollUsingKeys() {
 }
 
 function enableScroll() {
-    enableScrollUsingKeys()
+    enableScrollUsingKeys();
     window.removeEventListener('DOMMouseScroll', preventDefault, false);
     window.removeEventListener('wheel', preventDefault, {passive: false});
     window.removeEventListener('mousewheel', preventDefault, {passive: false});
