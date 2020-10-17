@@ -1,6 +1,8 @@
 let color1, color2, color3, color4;
+let window_width;
 
 function initialise() {
+    window_width = window.innerWidth;
     color1 = getComputedStyle(document.documentElement)
         .getPropertyValue('--color1');
     color2 = getComputedStyle(document.documentElement)
@@ -14,8 +16,11 @@ function initialise() {
 window.onload = pageLoad;
 
 window.onresize = function () {
-    [1, 2, 3].forEach(resetDetails);
-    reset_effects();
+    if (window.innerWidth !== window_width) {
+        [1, 2, 3].forEach(resetDetails);
+        reset_effects();
+        window_width = window.innerWidth;
+    }
 };
 
 function pageLoad() {
@@ -169,9 +174,9 @@ function preventDefaultForScrollKeys(e) {
 }
 
 function configureArrowVisibility(elem) {
-    const maxTop = elem.scrollHeight - elem.offsetHeight;
+    const maxTop = (elem.scrollHeight - elem.offsetHeight) * 0.93;
     const scrollTop = elem.scrollTop;
-    if (scrollTop === maxTop) {
+    if (scrollTop >= maxTop) {
         elem.parentElement.children[2].setAttribute('style', 'display: none;')
     } else {
         elem.parentElement.children[2].setAttribute('style', 'display: unset;')
