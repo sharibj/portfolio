@@ -3,26 +3,31 @@
     <script src="js/main.js"></script>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/viewports.css">
-    <link rel="stylesheet" type="text/css" href="css/theme.css">
+    <link rel="stylesheet" type="text/css" href="css/light.css">
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 
 <Body>
 <div class="body">
-    <div class="content" onscroll="contentScrolled()">
+    <div class="content light" onscroll="contentScrolled()">
+        <label class="switch">
+            <input type="checkbox" onclick="toggleTheme();" id="themeToggle">
+            <span class="slider round"></span>
+            <span class="text"></span>
+        </label>
         <div class="page _1 column">
             <div class="header row effect">
                 <img src="resources/img/profile.png" alt="Profile Photo" class="text-focus-in">
                 <div class="nametag column">
-                    <div class="lastname color2 text-focus-in">JAFARI</div>
-                    <div class="name color2 text-focus-in">SHARIB</div>
-                    <div class="role color1 text-focus-in">Developer</div>
+                    <div class="lastname color4 text-focus-in">JAFARI</div>
+                    <div class="name color4 text-focus-in">SHARIB</div>
+                    <div class="role color3 text-focus-in">Developer</div>
                 </div>
             </div>
             <div class="introduction column">
                 <div class="title color2">WHO AM I</div>
-                <div class="subtitle color4">Software craftsman with 7 Years of experience</div>
+                <div class="subtitle color3">Software craftsman with 7 Years of experience</div>
                 <div class="console color1">
                     <div class="inner text-focus-in" include-resource="resources/html/console.html"></div>
                 </div>
@@ -30,7 +35,7 @@
         </div>
         <div class="page _2 column">
             <div class="experience column">
-                <div class=" title color4">WORK EXPERIENCE</div>
+                <div class=" title color2">WORK EXPERIENCE</div>
                 <div class="row card-container">
                     <div class="card row _1 effect" onclick="showDetails('1')">
                         <i class="arrow left"></i>

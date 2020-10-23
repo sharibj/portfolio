@@ -3,6 +3,10 @@ let window_width;
 
 function initialise() {
     window_width = window.innerWidth;
+    loadColors();
+}
+
+function loadColors() {
     color1 = getComputedStyle(document.documentElement)
         .getPropertyValue('--color1');
     color2 = getComputedStyle(document.documentElement)
@@ -187,4 +191,29 @@ function configureArrowVisibility(elem) {
         elem.parentElement.children[0].setAttribute('style', 'display: unset;')
 
     }
+}
+
+const lightUrl = "css/light.css";
+const darkUrl = "css/dark.css";
+
+function toggleTheme() {
+    document.getElementsByTagName('link')[2].remove();
+    link = document.createElement('link');
+    link.type = "text/css";
+    link.rel = "stylesheet";
+
+    if (document.getElementById("themeToggle").checked) {
+        link.href = darkUrl;
+        document.querySelector('.content').classList.remove("light");
+        document.querySelector('.content').classList.add("dark");
+    } else {
+        link.href = lightUrl;
+        document.querySelector('.content').classList.remove("dark");
+        document.querySelector('.content').classList.add("light");
+    }
+    link.onload = function () {
+        loadColors();
+        loadSvgColors();
+    };
+    document.getElementsByTagName('head')[0].appendChild(link);
 }
