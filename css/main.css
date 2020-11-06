@@ -514,6 +514,27 @@ body {
     -webkit-transform: rotate(45deg);
 }
 
+.details._1 .arrow.right {
+    position: absolute;
+    /*top: 27.5vh;*/
+    top: 45.5vh;
+    margin-right: 94vw;
+}
+
+.details._2 .arrow.left {
+    position: absolute;
+    /*top: 45.5vh;*/
+    top: 45.5vh;
+    margin-left: 94vw;
+}
+
+.details._3 .arrow.right {
+    position: absolute;
+    /*top: 65.5vh;*/
+    top: 45.5vh;
+    margin-right: 94vw;
+}
+
 /**********************/
 
 
