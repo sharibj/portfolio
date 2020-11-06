@@ -148,14 +148,7 @@ body {
     scrollbar-width: none;
     scroll-snap-type: y mandatory;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-.content.dark {
-    background: url("../resources/svg/dark-triangles.svg");
-}
-
-.content.light {
-    background: url("../resources/svg/triangles.svg");
+    background: var(--background);
 }
 
 .content.proximity {

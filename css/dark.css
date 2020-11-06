@@ -1,7 +1,8 @@
 :root {
-    --color3: #F1F3E2;
-    --color4: #ABD6E8;
-    --color1: #5C8BC3;
-    --color2: #3064A7;
+    --color1: #3064A7;
+    --color2: #CF6679;
+    --color3: #BB86FC;
+    --color4: #03DAC6;
     --back: #101D39;
+    --background: url("../resources/svg/dark-triangles.svg");
 }
