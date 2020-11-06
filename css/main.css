@@ -40,7 +40,7 @@ Lightest to darkest
     width: 18vw;
     height: 7vw;
     right: -73.5vw;
-    top: 40.5vw;
+    top: 39.5vw;
     z-index: 4;
     scale: 0.8;
 }
@@ -59,7 +59,6 @@ Lightest to darkest
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--color4);
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -72,9 +71,16 @@ Lightest to darkest
     width: 5vw;
     left: 1vw;
     bottom: 1.1vw;
-    background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
+}
+
+.slider.round {
+    border-radius: 5vw;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }
 
 input:checked + .slider {
@@ -91,12 +97,20 @@ input:checked + .slider:before {
     transform: translateX(11vw);
 }
 
-.slider.round {
-    border-radius: 5vw;
+.light .slider {
+    background-color: var(--color4);
 }
 
-.slider.round:before {
-    border-radius: 50%;
+.light .slider:before {
+    background-color: var(--color1);
+}
+
+.dark .slider {
+    background-color: var(--color1);
+}
+
+.dark .slider:before {
+    background-color: var(--color4);
 }
 
 .text {
@@ -117,7 +131,7 @@ input:checked + .slider:before {
 }
 
 .dark .text {
-    color: var(--color3);
+    color: var(--color4);
     left: 2vw;
     transition: left .4s;
 }
