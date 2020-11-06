@@ -41,7 +41,7 @@ Lightest to darkest
     height: 7vw;
     right: -73.5vw;
     top: 39.5vw;
-    z-index: 4;
+    z-index: 3;
     scale: 0.8;
 }
 
@@ -249,7 +249,6 @@ body {
 
 /**********************/
 
-
 /*  Introduction    */
 
 .introduction {
@@ -288,7 +287,6 @@ body {
 
 /**********************/
 
-
 /*  Experience */
 
 .experience {
@@ -304,7 +302,6 @@ body {
 .experience .card {
     width: 100vw;
     height: fit-content;
-    padding: 4vw;
     margin-top: 8vw;
     background-color: var(--color4);
     cursor: hand;
@@ -324,7 +321,7 @@ body {
 }
 
 .experience .card:not(.show):not(.hide) {
-    margin-left: 77vw;
+    margin-left: 72vw;
 }
 
 .experience .card._1.effect-active:not(.show):not(.hide) {
@@ -342,21 +339,21 @@ body {
 }
 
 .experience .card._2.show {
-    margin-left: 120vw;
+    margin-left: 110vw;
     transition: margin-left 0.6s linear 0s;
 }
 
 .experience .card._2.effect-active.hide {
-    margin-left: -20vw;
+    margin-left: -10vw;
     transition: margin-left 0.6s linear 0s;
 }
 
 .experience .card._2:not(.show):not(.hide) {
-    margin-left: -85vw;
+    margin-left: -73vw;
 }
 
 .experience .card._2.effect-active:not(.show):not(.hide) {
-    margin-left: -20vw;
+    margin-left: -10vw;
     transition: margin-left 0.6s ease-in 0.2s;
 }
 
@@ -405,9 +402,14 @@ body {
 .experience .responsibilities {
     width: 86vw;
     height: 90vh;
-    padding: 0 2vh 0 2vh;
     overflow-y: auto;
     font-size: 4vw;
+    scrollbar-width: none;
+}
+
+.experience .details._1 .responsibilities,
+.experience .details._3 .responsibilities {
+    margin-left: 6vw;
 }
 
 .experience .responsibilities ul {
@@ -444,7 +446,6 @@ body {
     margin-bottom: 1vw;
 }
 
-
 .experience .card._2 .column .meta {
     place-content: flex-end;
 }
@@ -479,7 +480,7 @@ body {
 }
 
 .arrow {
-    border: solid var(--color1);
+    border: solid var(--color4);
     border-width: 0 0.8vw 0.8vw 0;
     display: inline-block;
     padding: 1.6vw;
@@ -498,6 +499,10 @@ body {
     left: -1vw;
 }
 
+.arrow.up, .arrow.down {
+    border-color: var(--color1);
+}
+
 .arrow.up {
     position: absolute;
     left: 47vw;
@@ -514,29 +519,75 @@ body {
     -webkit-transform: rotate(45deg);
 }
 
+.card .arrow_back_bg {
+    width: 8vw;
+    height: 25vw;
+    background-color: var(--color2);
+    cursor: pointer;
+}
+
+.card._1 .arrow_back_bg, .card._3 .arrow_back_bg {
+    border-radius: 21px 0 0 21px;
+    margin-right: 2vw;
+}
+
+.card._2 .arrow_back_bg {
+    border-radius: 0 21px 21px 0;
+    margin-left: 2vw;
+}
+
+.card .arrow_back_bg i {
+    top: 10vw;
+}
+
+.card._1 .arrow_back_bg i, .card._3 .arrow_back_bg i {
+    left: 2.5vw;
+}
+
+.details .back_bg {
+    position: absolute;
+    width: 10vw;
+    height: 100vh;
+    top: 0;
+    background-color: var(--color2);
+    cursor: pointer;
+}
+
+.details._1 .back_bg, .details._3 .back_bg {
+    left: 0;
+    border-radius: 6vw 0 0 6vw;
+}
+
+.details._2 .back_bg {
+    right: 0;
+    border-radius: 0 6vw 6vw 0;
+}
+
 .details._1 .arrow.right {
     position: absolute;
-    /*top: 27.5vh;*/
     top: 45.5vh;
     margin-right: 94vw;
+    z-index: 4;
+    border-width: 0 1.2vw 1.2vw 0;
 }
 
 .details._2 .arrow.left {
     position: absolute;
-    /*top: 45.5vh;*/
     top: 45.5vh;
     margin-left: 94vw;
+    z-index: 4;
+    border-width: 0 1.2vw 1.2vw 0;
 }
 
 .details._3 .arrow.right {
     position: absolute;
-    /*top: 65.5vh;*/
     top: 45.5vh;
     margin-right: 94vw;
+    z-index: 4;
+    border-width: 0 1.2vw 1.2vw 0;
 }
 
 /**********************/
-
 
 /*  Skills */
 
@@ -609,7 +660,7 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 100;
+    z-index: 2;
 }
 
 .skill_bar ._100 {
@@ -661,9 +712,7 @@ body {
     }
 }
 
-
 /**********************/
-
 
 /*  Effects */
 
