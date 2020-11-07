@@ -1,0 +1,74 @@
+/*  Header  */
+
+.header {
+    height: fit-content;
+    width: 90vw;
+}
+
+.header img {
+    width: 35vw;
+    height: 35vw;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 0px 7px -1px #000000;
+    box-shadow: 0px 0px 7px -1px #000000;
+}
+
+.header img:hover {
+    -webkit-animation: vibrate-1 0.9s linear infinite both;
+    animation: vibrate-1 0.9s linear infinite both;
+}
+
+.header .nametag {
+    vertical-align: center;
+    margin-left: 5vw;
+    align-self: center;
+    overflow: hidden;
+}
+
+.header .nametag .lastname {
+    font-size: 10vw;
+}
+
+.header .nametag .name {
+    font-size: 13vw;
+}
+
+.header .nametag .role {
+    font-size: 7vw;
+}
+
+/*  Introduction    */
+
+.introduction {
+    width: 90vw;
+    margin-top: 10%;
+    align-items: center;
+}
+
+.introduction .console {
+    width: 90vw;
+    height: 50vw;
+    margin-top: 10%;
+    background-color: var(--color4);
+    line-height: 150%;
+    box-sizing: border-box;
+    border-radius: 5vw;
+    font-size: 4vw;
+}
+
+.introduction .console .inner {
+    margin: 5%;
+    overflow: hidden;
+    max-height: 0;
+    height: fit-content;
+    box-sizing: border-box;
+}
+
+.introduction .console .inner:not(.effect) {
+    max-height: 50vw;
+}
+
+.introduction .console .inner.effect-active {
+    max-height: 50vw;
+    transition: max-height 3s linear 0s;
+}

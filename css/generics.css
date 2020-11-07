@@ -1,0 +1,31 @@
+/*********************
+Color Scheme
+Lightest to darkest : 1 to 4
+*/
+.color1 {
+    color: var(--color1);
+}
+
+.color2 {
+    color: var(--color2);
+}
+
+.color3 {
+    color: var(--color3);
+}
+
+.color4 {
+    color: var(--color4);
+}
+
+/**********************/
+
+.row {
+    display: flex;
+    flex-flow: row;
+}
+
+.column {
+    display: flex;
+    flex-flow: column;
+}

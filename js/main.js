@@ -193,8 +193,8 @@ function configureArrowVisibility(elem) {
     }
 }
 
-const lightUrl = "css/light.css";
-const darkUrl = "css/dark.css";
+const lightUrl = "css/themes/light.css";
+const darkUrl = "css/themes/dark.css";
 
 function toggleTheme() {
     document.getElementsByTagName('link')[2].remove();

@@ -1,0 +1,171 @@
+@import "experience-card.css";
+/*  Experience */
+
+.experience {
+    align-items: center;
+    flex-grow: 0.8;
+    width: 90vw;
+}
+
+.experience .card-container {
+    width: 100vw;
+}
+
+.experience .details {
+    position: absolute;
+    width: 100vw;
+    height: 90vh;
+    padding: 5vh 0 5vh 0;
+    top: 0;
+    right: -100vw;
+    background-color: var(--color4);
+    border-radius: 6vw;
+    cursor: hand;
+    z-index: 3;
+}
+
+.experience .details.show {
+    right: 0;
+    transition: right 0.4s linear 0s;
+}
+
+.experience .details.hide {
+    right: -100vw;
+    transition: right 0.6s ease-in 0.0s;
+}
+
+.experience .details._2 {
+    right: unset;
+    left: -100vw;
+}
+
+.experience .details._3 {
+    z-index: 1;
+}
+
+.experience .details._2.show {
+    left: 0;
+    transition: left 0.4s linear 0s;
+}
+
+.experience .details._2.hide {
+    left: -100vw;
+    transition: left 0.6s ease-in 0.0s;
+}
+
+.experience .responsibilities {
+    width: 86vw;
+    height: 90vh;
+    overflow-y: auto;
+    font-size: 4vw;
+    scrollbar-width: none;
+}
+
+.experience .details._1 .responsibilities,
+.experience .details._3 .responsibilities {
+    margin-left: 6vw;
+}
+
+.experience .responsibilities ul {
+    margin: 0;
+}
+
+.experience .responsibilities ul li {
+    margin-bottom: 4vw;
+}
+
+#experience_footer.svg_footer svg {
+    width: 40vw;
+}
+
+.svg_footer {
+    width: 90vw;
+    margin-top: 4vh;
+    text-align-last: center;
+    z-index: 2;
+}
+
+.arrow {
+    border: solid var(--color4);
+    border-width: 0 0.8vw 0.8vw 0;
+    display: inline-block;
+    padding: 1.6vw;
+    position: relative;
+}
+
+.arrow.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    right: -1vw;
+}
+
+.arrow.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    left: -1vw;
+}
+
+.arrow.up, .arrow.down {
+    border-color: var(--color1);
+}
+
+.arrow.up {
+    position: absolute;
+    left: 47vw;
+    top: 1vh;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.arrow.down {
+    position: absolute;
+    left: 47vw;
+    bottom: 1vh;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.details .back_bg {
+    position: absolute;
+    width: 10vw;
+    height: 100vh;
+    top: 0;
+    background-color: var(--color2);
+    cursor: pointer;
+}
+
+.details._1 .back_bg, .details._3 .back_bg {
+    left: 0;
+    border-radius: 6vw 0 0 6vw;
+}
+
+.details._2 .back_bg {
+    right: 0;
+    border-radius: 0 6vw 6vw 0;
+}
+
+.details._1 .arrow.right {
+    position: absolute;
+    top: 45.5vh;
+    margin-right: 94vw;
+    z-index: 4;
+    border-width: 0 1.2vw 1.2vw 0;
+}
+
+.details._2 .arrow.left {
+    position: absolute;
+    top: 45.5vh;
+    margin-left: 94vw;
+    z-index: 4;
+    border-width: 0 1.2vw 1.2vw 0;
+}
+
+.details._3 .arrow.right {
+    position: absolute;
+    top: 45.5vh;
+    margin-right: 94vw;
+    z-index: 4;
+    border-width: 0 1.2vw 1.2vw 0;
+}
+
+/**********************/

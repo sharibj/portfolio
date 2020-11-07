@@ -1,0 +1,91 @@
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 18vw;
+    height: 7vw;
+    right: -73.5vw;
+    top: 39.5vw;
+    scale: 0.8;
+    z-index: 3;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: .4s;
+    transition: .4s;
+    background-color: var(--color4);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    place-content: flex-end;
+    height: 5vw;
+    width: 5vw;
+    left: 1vw;
+    bottom: 1.1vw;
+    -webkit-transition: .4s;
+    transition: .4s;
+    background-color: var(--color1);
+}
+
+.slider.round {
+    border-radius: 5vw;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--color4);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--color1);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(11vw);
+    -ms-transform: translateX(11vw);
+    transform: translateX(11vw);
+}
+
+.text {
+    position: absolute;
+    top: 1vw;
+    font-size: 4vw;
+    cursor: pointer;
+    color: var(--color1);
+}
+
+.light .text {
+    left: 7vw;
+    transition: left .4s;
+}
+
+.light .text::after {
+    content: "Dark";
+}
+
+.dark .text {
+    left: 2vw;
+    transition: left .4s;
+}
+
+.dark .text::after {
+    content: "Light";
+}

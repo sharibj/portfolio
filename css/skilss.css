@@ -1,0 +1,120 @@
+.skills {
+    align-items: center;
+    flex-grow: 0.8;
+    width: 90vw;
+}
+
+.skills .table {
+    padding: 0 4vw 0 4vw;
+}
+
+.skill_bar {
+    margin-top: 5vw;
+    align-items: flex-end;
+}
+
+.skill_bar .column {
+    width: 68vw;
+}
+
+.skill_bar .icon {
+    width: 10vw;
+    margin-right: 4vw;
+}
+
+.skill_bar .caption {
+    font-size: 4vw;
+    padding: 1vw;
+    justify-content: space-between;
+}
+
+.skill_bar .progress-bar-container {
+    width: 100%;
+    height: 2.5vw;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    border-radius: 1vw;
+    overflow: hidden;
+}
+
+.skill_bar .progress-bar-child {
+    width: 100%;
+    height: 100%;
+}
+
+.skill_bar .progress {
+    color: white;
+    text-align: center;
+    animation-direction: reverse;
+    background: var(--color4);
+    width: 100%;
+    /* Chrome10-25,Safari5.1-6 */
+    /* background: linear-gradient(to right, #e5405e 0%, #ffdb3a 45%, #3fffa2 100%); */
+    background: linear-gradient(to right, var(--color4) 0%, var(--color3) 25%, var(--color2) 50%, var(--color1) 100%);
+}
+
+.skill_bar .shrinker {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+}
+
+.skill_bar .inverted {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.skill_bar ._100 {
+    width: 0;
+}
+
+.skill_bar ._90 {
+    width: 10%;
+}
+
+.skill_bar ._80 {
+    width: 20%;
+}
+
+.skill_bar ._70 {
+    width: 30%;
+}
+
+.skill_bar ._60 {
+    width: 40%;
+}
+
+.skill_bar ._50 {
+    width: 50%;
+}
+
+.skill_bar.effect-active .timelapse {
+    animation-name: timelapse;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(.86, .05, .4, .96);
+}
+
+@keyframes timelapse {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes timelapse {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}

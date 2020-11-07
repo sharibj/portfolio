@@ -4,5 +4,8 @@
     --color3: #BB86FC;
     --color4: #03DAC6;
     --back: #101D39;
-    --background: url("../resources/svg/dark-triangles.svg");
+}
+
+.content {
+    background: url("../../resources/svg/dark-triangles.svg");
 }
