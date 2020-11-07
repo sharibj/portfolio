@@ -6,71 +6,96 @@
     cursor: hand;
     align-items: center;
     white-space: nowrap;
+}
+
+.experience .right .card {
     border-radius: 6vw 0 0 6vw;
 }
 
-.experience .card.show {
-    margin-left: -120vw;
-    transition: margin-left 0.6s linear 0s;
-}
-
-.experience .card.effect-active.hide {
-    margin-left: 10vw;
-    transition: margin-left 0.6s linear 0s;
-}
-
-.experience .card:not(.show):not(.hide) {
-    margin-left: 72vw;
-}
-
-.experience .card._1.effect-active:not(.show):not(.hide) {
-    margin-left: 10vw;
-    transition: margin-left 0.6s ease-in 0.2s;
-}
-
-.experience .card._3.effect-active:not(.show):not(.hide) {
-    margin-left: 10vw;
-    transition: margin-left 0.6s ease-in 0.6s;
-}
-
-.experience .card._2 {
+.experience .left .card {
     border-radius: 0 6vw 6vw 0;
 }
 
-.experience .card._2.show {
+/******************************************/
+.experience .card.show {
+    transition: margin-left 0.6s linear 0s;
+}
+
+.experience .right .card.show {
+    margin-left: -120vw;
+}
+
+.experience .left .card.show {
     margin-left: 110vw;
+}
+
+/******************************************/
+.experience .card.effect-active.hide {
     transition: margin-left 0.6s linear 0s;
 }
 
-.experience .card._2.effect-active.hide {
+.experience .right .card.effect-active.hide {
+    margin-left: 10vw;
+}
+
+.experience .left .card.effect-active.hide {
     margin-left: -10vw;
-    transition: margin-left 0.6s linear 0s;
 }
 
-.experience .card._2:not(.show):not(.hide) {
+/******************************************/
+.experience .right .card:not(.show):not(.hide) {
+    margin-left: 72vw;
+}
+
+.experience .left .card:not(.show):not(.hide) {
     margin-left: -73vw;
 }
 
-.experience .card._2.effect-active:not(.show):not(.hide) {
-    margin-left: -10vw;
-    transition: margin-left 0.6s ease-in 0.2s;
+/******************************************/
+.experience .card.effect-active:not(.show):not(.hide) {
+    transition: margin-left 0.6s ease-in;
 }
 
-.experience .card img {
-    height: 15vw;
-    width: 15vw;
+.experience .right .card.effect-active:not(.show):not(.hide) {
+    margin-left: 10vw;
 }
+
+.experience .left .card.effect-active:not(.show):not(.hide) {
+    margin-left: -10vw;
+}
+
+.experience .card._1.effect-active:not(.show):not(.hide) {
+    transition-delay: 0.2s;
+}
+
+.experience .card._2.effect-active:not(.show):not(.hide) {
+    transition-delay: 0.4s;
+}
+
+.experience .card._3.effect-active:not(.show):not(.hide) {
+    transition-delay: 0.6s;
+}
+
+/******************************************/
 
 .experience .card .column {
-    margin-left: 4vw;
     width: 68vw;
 }
 
-.experience .card._2 .column {
+.experience .right .card .column {
+    margin-left: 4vw;
+}
+
+.experience .left .card .column {
     margin-left: 12vw;
     margin-right: 4vw;
     text-align: end;
 }
+
+.experience .left .card .column .meta {
+    place-content: flex-end;
+}
+
 
 .experience .card .column .company {
     font-size: 6vw;
@@ -82,22 +107,16 @@
     margin-bottom: 1vw;
 }
 
-.experience .card._2 .column .meta {
-    place-content: flex-end;
-}
-
 .experience .card .column .duration {
     font-size: 3vw;
 }
 
 .experience .card .column .location {
     font-size: 3vw;
-    margin-left: 16vw;
-}
-
-.experience .card._1 .column .location {
     margin-left: 13vw;
 }
+
+/******************************************/
 
 .experience .card .arrow_back_bg {
     width: 8vw;
@@ -106,12 +125,12 @@
     cursor: pointer;
 }
 
-.experience .card._1 .arrow_back_bg, .card._3 .arrow_back_bg {
+.experience .right .card .arrow_back_bg {
     border-radius: 21px 0 0 21px;
     margin-right: 2vw;
 }
 
-.experience .card._2 .arrow_back_bg {
+.experience .left .card .arrow_back_bg {
     border-radius: 0 21px 21px 0;
     margin-left: 2vw;
 }
@@ -120,6 +139,11 @@
     top: 10vw;
 }
 
-.experience .card._1 .arrow_back_bg i, .card._3 .arrow_back_bg i {
+.experience .right .card .arrow_back_bg i {
     left: 2.5vw;
+}
+
+.experience .card img {
+    height: 15vw;
+    width: 15vw;
 }
