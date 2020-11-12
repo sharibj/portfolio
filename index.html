@@ -72,12 +72,16 @@
                         <div class="arrow_back_bg"><i class="arrow right"></i></div>
                     </div>
                     <div class="details _2">
-                        <i class="arrow up" onclick="scrollUp('2')"></i>
+                        <div class="up block" onclick="scrollUp('2')">
+                            <i class="arrow up" onclick="scrollUp('2')"></i>
+                        </div>
                         <div class="responsibilities color1"
                              onscroll="configureArrowVisibility(this)"
                              onresize="configureArrowVisibility(this)"
                              include-resource="resources/html/coriolis-details.html"></div>
-                        <i class="arrow down" onclick="scrollDown('2')"></i>
+                        <div class="down block" onclick="scrollDown('2')">
+                            <i class="arrow down" onclick="scrollDown('2')"></i>
+                        </div>
                         <i class="arrow left" onclick="hideDetails('2')"></i>
                         <div class="back_bg" onclick="hideDetails('2')"></div>
                     </div>

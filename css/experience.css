@@ -107,22 +107,34 @@
     left: -1vw;
 }
 
+.block {
+    position: absolute;
+    width: 100vw;
+    height: 5vh;
+    cursor: pointer;
+}
+
+.block.up {
+    top: 0;
+}
+
+.block.down {
+    bottom: 0;
+}
+
 .arrow.up, .arrow.down {
+    left: 47vw;
     border-color: var(--color1);
 }
 
 .arrow.up {
-    position: absolute;
-    left: 47vw;
-    top: 1vh;
+    top: 2vh;
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
 }
 
 .arrow.down {
-    position: absolute;
-    left: 47vw;
-    bottom: 1vh;
+    bottom: 0vh;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
 }
