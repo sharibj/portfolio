@@ -65,6 +65,7 @@ function showDetails(experienceNumber) {
     removeClassName('.experience .card._' + experienceNumber, 'hide');
     removeClassName('.experience .details._' + experienceNumber, 'hide');
     addClassName('.experience .card._' + experienceNumber, 'show');
+    addClassName('.experience .card._' + experienceNumber, 'effect-active');
     addClassName('.experience .details._' + experienceNumber, 'show');
     disableScrollUsingKeys();
     configureArrowVisibility(document.querySelector(".details._2 .responsibilities"));
@@ -72,6 +73,7 @@ function showDetails(experienceNumber) {
 
 function hideDetails(experienceNumber) {
     addClassName('.experience .card._' + experienceNumber, 'hide');
+    addClassName('.experience .card._' + experienceNumber, 'effect-active');
     addClassName('.experience .details._' + experienceNumber, 'hide');
     removeClassName('.experience .card._' + experienceNumber, 'show');
     removeClassName('.experience .details._' + experienceNumber, 'show');
