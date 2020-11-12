@@ -1,21 +1,6 @@
-let color1, color2, color3, color4;
 let window_width;
-
-function initialise() {
-    window_width = window.innerWidth;
-    loadColors();
-}
-
-function loadColors() {
-    color1 = getComputedStyle(document.documentElement)
-        .getPropertyValue('--color1');
-    color2 = getComputedStyle(document.documentElement)
-        .getPropertyValue('--color2');
-    color3 = getComputedStyle(document.documentElement)
-        .getPropertyValue('--color3');
-    color4 = getComputedStyle(document.documentElement)
-        .getPropertyValue('--color4');
-}
+let scrollCount = 0;
+const scrollThrottleCount = 25;
 
 window.onload = pageLoad;
 
@@ -25,18 +10,22 @@ window.onresize = function () {
         reset_effects();
         window_width = window.innerWidth;
     }
+
 };
 
 function pageLoad() {
-    initialise();
     includeResources();
+    initialise();
     reset_effects();
     enable_effects();
+
 }
 
-/*  Scroll Throttle and enable effects only when item is scrolled into view completely  */
-let scrollCount = 0;
-const scrollThrottleCount = 25;
+function initialise() {
+    window_width = window.innerWidth;
+    refreshTheme();
+
+}
 
 function contentScrolled() {
     scrollCount++;
@@ -46,32 +35,6 @@ function contentScrolled() {
     }
 }
 
-function reset_effects() {
-    const elements = document.querySelectorAll('.effect.effect-active');
-    elements.forEach(remove_active_effect_class);
-}
-
-function remove_active_effect_class(element) {
-    element.classList.remove("effect-active");
-}
-
-
-function enable_effects() {
-    const elements = document.querySelectorAll('.effect:not(.effect-active)');
-    elements.forEach(add_active_effect_class);
-}
-
-function add_active_effect_class(element) {
-    const position = element.getBoundingClientRect();
-    // checking if element is fully visible
-    if (position.top >= 0 && position.bottom <= window.innerHeight) {
-        element.classList.add("effect-active");
-    }
-}
-
-/******************************************************************************************************/
-
-/*  Load svg resources and set colors according to the selected theme   */
 function includeResources() {
     document.querySelectorAll('div[include-resource]').forEach(copyResourceToElement);
 }
@@ -84,29 +47,11 @@ function copyResourceToElement(element) {
         client.onreadystatechange = function () {
             element.innerHTML = client.responseText;
             element.removeAttribute("include-resource");
-            loadSvgColors();
+            refreshTheme();
         };
         client.send();
     }
 }
-
-function loadSvgColors() {
-    document.querySelectorAll("[id$='_color1']").forEach(setColorToElement, color1);
-    document.querySelectorAll("[id$='_color2']").forEach(setColorToElement, color2);
-    document.querySelectorAll("[id$='_color3']").forEach(setColorToElement, color3);
-    document.querySelectorAll("[id$='_color4']").forEach(setColorToElement, color4);
-}
-
-function setColorToElement(itemElement) {
-    itemElement.style.fill = this;
-    const children = itemElement.children;
-    for (let i = 0; i < children.length; i++) {
-        const child = children[i];
-        child.style.fill = this;
-    }
-}
-
-/******************************************************************************************************/
 
 function addClassName(selector, className) {
     document.querySelector(selector).classList.add(className);
@@ -141,7 +86,6 @@ function resetDetails(experienceNumber) {
     enableScrollUsingKeys();
 }
 
-/**/
 function disableScrollUsingKeys() {
     window.addEventListener('keydown', preventDefaultForScrollKeys, false);
 }
@@ -191,29 +135,4 @@ function configureArrowVisibility(elem) {
         elem.parentElement.children[0].setAttribute('style', 'display: unset;')
 
     }
-}
-
-const lightUrl = "css/themes/light.css";
-const darkUrl = "css/themes/dark.css";
-
-function toggleTheme() {
-    document.getElementsByTagName('link')[2].remove();
-    link = document.createElement('link');
-    link.type = "text/css";
-    link.rel = "stylesheet";
-
-    if (document.getElementById("themeToggle").checked) {
-        link.href = darkUrl;
-        document.querySelector('.content').classList.remove("light");
-        document.querySelector('.content').classList.add("dark");
-    } else {
-        link.href = lightUrl;
-        document.querySelector('.content').classList.remove("dark");
-        document.querySelector('.content').classList.add("light");
-    }
-    link.onload = function () {
-        loadColors();
-        loadSvgColors();
-    };
-    document.getElementsByTagName('head')[0].appendChild(link);
 }

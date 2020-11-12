@@ -51,7 +51,7 @@
     width: 100%;
     /* Chrome10-25,Safari5.1-6 */
     /* background: linear-gradient(to right, #e5405e 0%, #ffdb3a 45%, #3fffa2 100%); */
-    background: linear-gradient(to right, var(--color4) 0%, var(--color3) 25%, var(--color2) 50%, var(--color1) 100%);
+    background: linear-gradient(to right, var(--color3) 0%, var(--color2) 100%);
 }
 
 .skill_bar .shrinker {
