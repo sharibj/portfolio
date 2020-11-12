@@ -1,5 +1,5 @@
 .experience .card {
-    width: 100vw;
+    width: 90vw;
     height: fit-content;
     margin-top: 8vw;
     background-color: var(--color4);
@@ -22,11 +22,11 @@
 }
 
 .experience .right .card.show {
-    margin-left: -120vw;
+    margin-left: -90vw;
 }
 
 .experience .left .card.show {
-    margin-left: 110vw;
+    margin-left: 90vw;
 }
 
 /******************************************/
@@ -39,7 +39,7 @@
 }
 
 .experience .left .card.effect-active.hide {
-    margin-left: -10vw;
+    margin-left: 0vw;
 }
 
 /******************************************/
@@ -48,7 +48,7 @@
 }
 
 .experience .left .card:not(.show):not(.hide) {
-    margin-left: -73vw;
+    margin-left: -63vw;
 }
 
 /******************************************/
@@ -61,7 +61,7 @@
 }
 
 .experience .left .card.effect-active:not(.show):not(.hide) {
-    margin-left: -10vw;
+    margin-left: 0vw;
 }
 
 .experience .card._1.effect-active:not(.show):not(.hide) {
@@ -87,7 +87,6 @@
 }
 
 .experience .left .card .column {
-    margin-left: 12vw;
     margin-right: 4vw;
     text-align: end;
 }
