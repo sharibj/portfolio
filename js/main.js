@@ -24,7 +24,7 @@ function pageLoad() {
 function initialise() {
     window_width = window.innerWidth;
     refreshTheme();
-
+    addSwipeListeners(3);
 }
 
 function contentScrolled() {
