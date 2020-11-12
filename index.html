@@ -50,11 +50,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="details _1" onclick="hideDetails('1')">
+                    <div class="details _1">
                         <div class="responsibilities color1"
                              include-resource="resources/html/hexad-details.html"></div>
-                        <i class="arrow right"></i>
-                        <div class="back_bg"></div>
+                        <i class="arrow right" onclick="hideDetails('1')"></i>
+                        <div class="back_bg" onclick="hideDetails('1')"></div>
                     </div>
                 </div>
                 <div class="row card-container left">
@@ -70,15 +70,15 @@
                         <img alt="Coriolis Logo" src="resources/img/coriolis.png" class="left">
                         <div class="arrow_back_bg"><i class="arrow right"></i></div>
                     </div>
-                    <div class="details _2" onclick="hideDetails('2')">
-                        <i class="arrow up"></i>
+                    <div class="details _2">
+                        <i class="arrow up" onclick="scrollUp('2')"></i>
                         <div class="responsibilities color1"
                              onscroll="configureArrowVisibility(this)"
                              onresize="configureArrowVisibility(this)"
                              include-resource="resources/html/coriolis-details.html"></div>
-                        <i class="arrow down"></i>
-                        <i class="arrow left"></i>
-                        <div class="back_bg"></div>
+                        <i class="arrow down" onclick="scrollDown('2')"></i>
+                        <i class="arrow left" onclick="hideDetails('2')"></i>
+                        <div class="back_bg" onclick="hideDetails('2')"></div>
                     </div>
                 </div>
                 <div class="row card-container right">
@@ -94,11 +94,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="details _3" onclick="hideDetails('3'); enableScroll()">
+                    <div class="details _3" onclick="enableScroll()">
                         <div class="responsibilities color1"
                              include-resource="resources/html/cognizant-details.html"></div>
-                        <i class="arrow right"></i>
-                        <div class="back_bg"></div>
+                        <i class="arrow right" onclick="hideDetails('3')"></i>
+                        <div class="back_bg" onclick="hideDetails('3')"></div>
                     </div>
                 </div>
             </div>

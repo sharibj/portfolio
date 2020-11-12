@@ -112,6 +112,16 @@ function enableScroll() {
     window.removeEventListener('touchmove', preventDefault, {passive: false});
 }
 
+const scrollSize = window.innerHeight * 0.8;
+
+function scrollUp(index) {
+    document.querySelector('.details._' + index + ' .responsibilities').scrollBy(0, -scrollSize);
+}
+
+function scrollDown(index) {
+    document.querySelector(".details._" + index + " .responsibilities").scrollBy(0, scrollSize);
+}
+
 function preventDefault(e) {
     e.preventDefault();
 }
