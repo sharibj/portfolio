@@ -35,7 +35,7 @@ function refreshTheme() {
 }
 
 function toggleTheme() {
-    document.getElementsByTagName('link')[2].remove();
+    document.getElementsByTagName('link')[3].remove();
     let link;
     if (document.getElementById("themeToggle").checked) {
         link = createLink(darkUrl);

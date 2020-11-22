@@ -1,0 +1,112 @@
+.column{
+    display: flex;
+    flex-direction: column;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.media-bar {
+    align-items: center;
+}
+
+.media-bar .link {
+    justify-content: space-between;
+    position: relative;
+    width: 83%;
+    top: 10vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.media-bar .link .bar {
+    width: 30%;
+    border-bottom: 1vw solid var(--color4);
+}
+
+.media-bar .icons .icon .ir {
+    display: block;
+    overflow: visible;
+    padding: 0 0 100%;
+    position: relative;
+    height: 0;
+    width: 100%;
+}
+
+.media-bar .icons .icon .ir > * {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.media-bar .icons {
+    justify-content: space-between;
+    font-size: 0;
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    padding-inline-start: 0;
+    margin-top: 4vw;
+    background-color: seashell;
+    border-radius: 10vw;
+    border: 0.5vw solid var(--color4);
+}
+
+.media-bar .icons li {
+    display: inline-block;
+}
+
+.media-bar .icons a, .media-bar .icons svg {
+    display: block;
+}
+
+.media-bar .icons a {
+    height: 10vw;
+    width: 10vw;
+}
+
+.media-bar .icons .icon:hover {
+    border-radius: 100%;
+    fill: #0e1a25 !important;
+    -webkit-transform: scale(1.25);
+    transform: scale(1.25);
+    -webkit-transition: background-color 0.5s, -webkit-transform 0.5s ease-out;
+    transition: background-color 0.5s, -webkit-transform 0.5s ease-out;
+    transition: background-color 0.5s, transform 0.5s ease-out;
+    transition: background-color 0.5s, transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+}
+
+.media-bar .icons .icon._1 {
+    fill: #d96e26;
+}
+
+.media-bar .icons .icon._1:hover {
+    background: #d96e26;
+}
+
+.media-bar .icons .icon._2 {
+    fill: #2626d9;
+}
+
+.media-bar .icons .icon._2:hover {
+    background: #2626d9;
+}
+
+.media-bar .icons .icon._3 {
+    fill: #2691d9;
+}
+
+.media-bar .icons .icon._3:hover {
+    background: #2691d9;
+}
+
+.media-bar .icons .icon._4 {
+    fill: #d9266e;
+}
+
+.media-bar .icons .icon._4:hover {
+    background: #d9266e;
+}
