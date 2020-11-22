@@ -2,10 +2,12 @@
     display: flex;
     flex-direction: column;
 }
+
 .row{
     display: flex;
     flex-direction: row;
 }
+
 .media-bar {
     align-items: center;
 }
@@ -14,14 +16,14 @@
     justify-content: space-between;
     position: relative;
     width: 83%;
-    top: 10vw;
+    top: 10.5vw;
     padding-left: 5vw;
     padding-right: 5vw;
 }
 
 .media-bar .link .bar {
     width: 30%;
-    border-bottom: 1vw solid var(--color4);
+    border-bottom: 1vw solid var(--color2);
 }
 
 .media-bar .icons .icon .ir {
@@ -50,9 +52,10 @@
     max-width: 100%;
     padding-inline-start: 0;
     margin-top: 4vw;
-    background-color: seashell;
+    background-color: var(--color4);
     border-radius: 10vw;
-    border: 0.5vw solid var(--color4);
+    padding: 1vw;
+    /*border: 0.5vw solid var(--color4);*/
 }
 
 .media-bar .icons li {
@@ -88,11 +91,10 @@
 }
 
 .media-bar .icons .icon._2 {
-    fill: #2626d9;
+    fill: #266ed9;
 }
-
 .media-bar .icons .icon._2:hover {
-    background: #2626d9;
+    background: #266ed9;
 }
 
 .media-bar .icons .icon._3 {
