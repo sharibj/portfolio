@@ -47,7 +47,7 @@
 
 .introduction .console {
     width: 90vw;
-    height: 50vw;
+    height: fit-content;
     margin-top: 10%;
     background-color: var(--color4);
     line-height: 150%;
@@ -65,10 +65,10 @@
 }
 
 .introduction .console .inner:not(.effect) {
-    max-height: 50vw;
+    max-height: 75vw;
 }
 
 .introduction .console .inner.effect-active {
-    max-height: 50vw;
+    max-height: 75vw;
     transition: max-height 3s linear 0s;
 }
