@@ -67,6 +67,11 @@ body {
 }
 
 .subtitle {
-    font-size: 4.1vw;
+    font-size: 5.5vw;
     text-align: center;
+}
+
+.bullet {
+    font-weight: bold;
+    margin-right: 2vw;
 }

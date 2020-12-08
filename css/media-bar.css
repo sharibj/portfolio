@@ -15,14 +15,14 @@
 .media-bar .link {
     justify-content: space-between;
     position: relative;
-    width: 83%;
-    top: 10.5vw;
+    width: 74%;
+    top: 13.5vw;
     padding-left: 5vw;
     padding-right: 5vw;
 }
 
 .media-bar .link .bar {
-    width: 30%;
+    width: 28%;
     border-bottom: 1vw solid var(--color2);
 }
 
@@ -67,8 +67,8 @@
 }
 
 .media-bar .icons a {
-    height: 10vw;
-    width: 10vw;
+    height: 15vw;
+    width: 15vw;
 }
 
 .media-bar .icons .icon:hover {

@@ -6,8 +6,8 @@
 }
 
 .header img {
-    width: 35vw;
-    height: 35vw;
+    width: 40vw;
+    height: 40vw;
     border-radius: 50%;
     -webkit-box-shadow: 0px 0px 7px -1px #000000;
     box-shadow: 0px 0px 7px -1px #000000;
@@ -26,29 +26,29 @@
 }
 
 .header .nametag .lastname {
-    font-size: 10vw;
+    font-size: 9vw;
 }
 
 .header .nametag .name {
-    font-size: 13vw;
+    font-size: 12vw;
 }
 
 .header .nametag .role {
-    font-size: 7vw;
+    font-size: 6vw;
 }
 
 /*  Introduction    */
 
 .introduction {
     width: 90vw;
-    margin-top: 10%;
+    margin-top: 6%;
     align-items: center;
 }
 
 .introduction .console {
     width: 90vw;
     height: fit-content;
-    margin-top: 10%;
+    margin-top: 3%;
     background-color: var(--color4);
     line-height: 150%;
     box-sizing: border-box;
