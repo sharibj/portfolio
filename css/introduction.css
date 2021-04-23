@@ -2,12 +2,12 @@
 
 .header {
     height: fit-content;
-    width: 90vw;
+    width: var(--90);
 }
 
 .header img {
-    width: 40vw;
-    height: 40vw;
+    width: var(--40);
+    height: var(--40);
     border-radius: 50%;
     -webkit-box-shadow: 0px 0px 7px -1px #000000;
     box-shadow: 0px 0px 7px -1px #000000;
@@ -20,40 +20,40 @@
 
 .header .nametag {
     vertical-align: center;
-    margin-left: 5vw;
+    margin-left: var(--5);
     align-self: center;
     overflow: hidden;
 }
 
 .header .nametag .lastname {
-    font-size: 9vw;
+    font-size: var(--9);
 }
 
 .header .nametag .name {
-    font-size: 12vw;
+    font-size: var(--12);
 }
 
 .header .nametag .role {
-    font-size: 6vw;
+    font-size: var(--6);
 }
 
 /*  Introduction    */
 
 .introduction {
-    width: 90vw;
+    width: var(--90);
     margin-top: 6%;
     align-items: center;
 }
 
 .introduction .console {
-    width: 90vw;
+    width: var(--90);
     height: fit-content;
     margin-top: 3%;
     background-color: var(--color4);
     line-height: 150%;
     box-sizing: border-box;
-    border-radius: 5vw;
-    font-size: 4vw;
+    border-radius: var(--5);
+    font-size: var(--4);
 }
 
 .introduction .console .inner {
@@ -65,10 +65,10 @@
 }
 
 .introduction .console .inner:not(.effect) {
-    max-height: 75vw;
+    max-height: var(--75);
 }
 
 .introduction .console .inner.effect-active {
-    max-height: 75vw;
+    max-height: var(--75);
     transition: max-height 3s linear 0s;
 }

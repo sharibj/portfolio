@@ -1,0 +1,67 @@
+@media only screen and (orientation: landscape) {
+    :root {
+        ---95: 95vw;
+        ---65: 65vw;
+        ---35: 35vw;
+        --100: 100vh;
+        --95: 95vh;
+        --90: 90vh;
+        --75: 75vh;
+        --74: 74vh;
+        --minus73dot5: -73.5vh;
+        --40dot5: 40.5vh;
+        --40: 40vh;
+        --18: 18vh;
+        --15: 15vh;
+        --14: 14vh;
+        --13dot5: 13.5vh;
+        --12: 12vh;
+        --11: 11vh;
+        --10: 10vh;
+        --9: 9vh;
+        --7: 7vh;
+        --6: 6vh;
+        --5: 5vh;
+        --5dot5: 5.5vh;
+        --4: 4vh;
+        --2dot5: 2.5vw;
+        --2: 2vh;
+        --1dot3: 1.3vh;
+        --1dot1: 1.1vh;
+        --1: 1vh;
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    :root {
+        ---95: 95vh;
+        ---65: 65vh;
+        ---35: 35vh;
+        --100: 100vw;
+        --95: 95vw;
+        --90: 90vw;
+        --75: 75vw;
+        --74: 74vw;
+        --minus73dot5: -73.5vw;
+        --40dot5: 40.5vw;
+        --40: 40vw;
+        --18: 18vw;
+        --15: 15vw;
+        --14: 14vw;
+        --13dot5: 13.5vw;
+        --12: 12vw;
+        --11: 11vw;
+        --10: 10vw;
+        --9: 9vw;
+        --7: 7vw;
+        --6: 6vw;
+        --5dot5: 5.5vw;
+        --5: 5vw;
+        --4: 4vw;
+        --2dot5: 2.5vw;
+        --2: 2vw;
+        --1dot3: 1.3vw;
+        --1dot1: 1.1vw;
+        --1: 1vw;
+    }
+}

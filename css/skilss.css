@@ -9,7 +9,7 @@
 }
 
 .skill_bar {
-    margin-top: 5vw;
+    margin-top: var(--5);
     align-items: flex-end;
 }
 
@@ -18,29 +18,29 @@
 }
 
 .skill_bar .icon {
-    width: 10vw;
+    width: var(--10);
     margin-right: 4vw;
 }
 
 .skill_bar .caption {
-    font-size: 4vw;
-    padding: 1vw;
+    font-size: var(--4);
+    padding: var(--1);
     justify-content: space-between;
 }
 
 .skill_bar .progress-bar-container {
     width: 100%;
-    height: 2.5vw;
+    height: var(--2dot5);
     margin: 0 auto;
     position: relative;
     top: 50%;
-    border-radius: 1vw;
+    border-radius: var(--1);
     overflow: hidden;
 }
 
 .skill_bar .progress-bar-child {
     width: 100%;
-    height: 100%;
+    height: var(--100);
 }
 
 .skill_bar .progress {

@@ -16,9 +16,9 @@
     justify-content: space-between;
     position: relative;
     width: 74%;
-    top: 13.5vw;
-    padding-left: 5vw;
-    padding-right: 5vw;
+    top: var(--13dot5);
+    padding-left: var(--5);
+    padding-right: var(--5);
 }
 
 .media-bar .link .bar {
@@ -51,10 +51,10 @@
     width: 100%;
     max-width: 100%;
     padding-inline-start: 0;
-    margin-top: 4vw;
+    margin-top: var(--4);
     background-color: var(--color4);
-    border-radius: 10vw;
-    padding: 1vw;
+    border-radius: var(--10);
+    padding: var(--1);
     /*border: 0.5vw solid var(--color4);*/
 }
 
@@ -67,8 +67,8 @@
 }
 
 .media-bar .icons a {
-    height: 15vw;
-    width: 15vw;
+    height: var(--15);
+    width: var(--15);
 }
 
 .media-bar .icons .icon:hover {

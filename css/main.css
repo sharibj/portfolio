@@ -3,6 +3,7 @@
 @import "introduction.css";
 @import "experience.css";
 @import "skilss.css";
+@import "constants.css";
 
 body {
     margin: 0;
@@ -40,7 +41,7 @@ body {
     align-content: flex-start;
     min-height: 95vh;
     height: fit-content;
-    padding-top: 5vw;
+    padding-top: var(--5);
     scroll-snap-align: start;
 }
 
@@ -51,27 +52,27 @@ body {
 .wip {
     position: absolute;
     height: 65vh;
-    padding-top: 35vh;
-    width: 100vw;
+    padding-top: var(---35);
+    width: var(--100);
     overflow: hidden;
     background-color: rgba(255, 255, 255, .7);
     z-index: 100;
     text-align: center;
     display: none;
-    font-size: 14vw;
+    font-size: var(--14);
 }
 
 .title {
     text-align: center;
-    font-size: 11vw;
+    font-size: var(--11);
 }
 
 .subtitle {
-    font-size: 5.5vw;
+    font-size: var(--5dot5);
     text-align: center;
 }
 
 .bullet {
     font-weight: bold;
-    margin-right: 2vw;
+    margin-right: var(--2);
 }

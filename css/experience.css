@@ -57,7 +57,7 @@
     width: 86vw;
     height: 90vh;
     overflow-y: auto;
-    font-size: 4vw;
+    font-size: var(--4);
     scrollbar-width: none;
     scroll-behavior: smooth;
 }
