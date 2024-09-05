@@ -72,7 +72,7 @@ header p {
     font-size: 1rem;
     color: var(--card-background);
     background: var(--primary-color);
-    border-radius: 50px;
+    border-radius: 10px;
     text-decoration: none;
     transition: background 0.3s ease, transform 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -85,6 +85,7 @@ header p {
 
 nav {
     display: flex;
+    flex-flow: wrap;
     justify-content: center;
     background: var(--secondary-color);
     padding: 12px;
@@ -96,8 +97,8 @@ nav {
 nav a {
     color: var(--card-background);
     padding: 10px 20px;
+    margin: 6px;
     text-decoration: none;
-    margin: 0 15px;
     border-radius: 50px;
     background: var(--primary-color);
     transition: background 0.3s ease, transform 0.3s ease;
