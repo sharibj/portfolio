@@ -1,0 +1,78 @@
+@import "theme-toggle.css";
+@import "generics.css";
+@import "introduction.css";
+@import "experience.css";
+@import "skilss.css";
+@import "constants.css";
+
+body {
+    margin: 0;
+}
+
+.body {
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+    top: 0;
+}
+
+.content {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100%;
+    width: 90vw;
+    padding: 0 5% 0 5%;
+    scrollbar-width: none;
+    scroll-snap-type: y mandatory;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content.proximity {
+    scroll-snap-type: y proximity;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.page {
+    display: flex;
+    align-content: flex-start;
+    min-height: 95vh;
+    height: fit-content;
+    padding-top: var(--5);
+    scroll-snap-align: start;
+}
+
+.footer {
+    margin-top: 10%;
+}
+
+.wip {
+    position: absolute;
+    height: 65vh;
+    padding-top: var(---35);
+    width: var(--100);
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, .7);
+    z-index: 100;
+    text-align: center;
+    display: none;
+    font-size: var(--14);
+}
+
+.title {
+    text-align: center;
+    font-size: var(--11);
+}
+
+.subtitle {
+    font-size: var(--5dot5);
+    text-align: center;
+}
+
+.bullet {
+    font-weight: bold;
+    margin-right: var(--2);
+}

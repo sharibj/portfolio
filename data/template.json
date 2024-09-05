@@ -1,0 +1,144 @@
+{
+    "header": {
+        "name": "[Your Name]",
+        "title": "[Your Professional Title or Brief Bio]",
+        "cvUrl": "[Your-CV-URL]",
+        "profilePicUrl": "[Your-Profile-Picture-URL]"
+    },
+    "navigation": [
+        {
+            "text": "About",
+            "href": "#about"
+        },
+        {
+            "text": "Experience",
+            "href": "#experience"
+        },
+        {
+            "text": "Certifications",
+            "href": "#certifications"
+        },
+        {
+            "text": "Skills",
+            "href": "#skills"
+        },
+        {
+            "text": "Contact",
+            "href": "#contact"
+        },
+        {
+            "text": "Socials",
+            "href": "#socials"
+        }
+    ],
+    "about": {
+        "text": "[Brief introduction about yourself. You can mention your experience, what drives you, and your professional interests.]"
+    },
+    "experience": [
+        {
+            "title": "[Job Title at Company Name]",
+            "timePeriod": "[Time Period]",
+            "description": "[Brief description of your responsibilities and achievements in this role.]"
+        },
+        {
+            "title": "[Job Title at Company Name]",
+            "timePeriod": "[Time Period]",
+            "description": "[Brief description of your responsibilities and achievements in this role.]"
+        }
+    ],
+    "certifications": [
+        {
+            "name": "[Certification Name 1]",
+            "issuer": "[Issuing Organization]"
+        },
+        {
+            "name": "[Certification Name 2]",
+            "issuer": "[Issuing Organization]"
+        },
+        {
+            "name": "[Certification Name 3]",
+            "issuer": "[Issuing Organization]"
+        }
+    ],
+    "skills": [
+        {
+            "category": "Programming Languages",
+            "skills": [
+                {
+                    "name": "JavaScript",
+                    "level": "90%"
+                },
+                {
+                    "name": "Python",
+                    "level": "85%"
+                },
+                {
+                    "name": "Java",
+                    "level": "80%"
+                }
+            ]
+        },
+        {
+            "category": "Web Development",
+            "skills": [
+                {
+                    "name": "HTML/CSS",
+                    "level": "95%"
+                },
+                {
+                    "name": "React",
+                    "level": "85%"
+                },
+                {
+                    "name": "Node.js",
+                    "level": "80%"
+                }
+            ]
+        },
+        {
+            "category": "Databases",
+            "skills": [
+                {
+                    "name": "MySQL",
+                    "level": "85%"
+                },
+                {
+                    "name": "MongoDB",
+                    "level": "80%"
+                },
+                {
+                    "name": "PostgreSQL",
+                    "level": "75%"
+                }
+            ]
+        }
+    ],
+    "contact": {
+        "placeholderName": "Your Name",
+        "placeholderEmail": "Your Email",
+        "placeholderMessage": "Your Message",
+        "buttonText": "Send Message"
+    },
+    "socials": [
+        {
+            "platform": "LinkedIn",
+            "url": "[LinkedIn-URL]",
+            "icon": "https://cdn-icons-png.flaticon.com/512/174/174857.png"
+        },
+        {
+            "platform": "GitHub",
+            "url": "[GitHub-URL]",
+            "icon": "https://cdn-icons-png.flaticon.com/512/733/733609.png"
+        },
+        {
+            "platform": "Twitter",
+            "url": "[Twitter-URL]",
+            "icon": "https://cdn-icons-png.flaticon.com/512/733/733579.png"
+        },
+        {
+            "platform": "Website",
+            "url": "[Your-Website-URL]",
+            "icon": "https://cdn-icons-png.flaticon.com/512/684/684908.png"
+        }
+    ]
+}

@@ -1,150 +1,164 @@
-let window_width;
-let scrollCount = 0;
-const scrollThrottleCount = 25;
 
-window.onload = pageLoad;
+document.addEventListener('DOMContentLoaded', () => {
+    const profileData = JSON.parse(document.getElementById('profile-data').textContent);
 
-window.onresize = function () {
-    if (window.innerWidth !== window_width) {
-        [1, 2, 3].forEach(resetDetails);
-        reset_effects();
-        window_width = window.innerWidth;
-    }
+    // Header
+    const header = document.createElement('header');
+    header.innerHTML = `
+        <img src="${profileData.header.profilePicUrl}" alt="${profileData.header.name}">
+        <h1>${profileData.header.name}</h1>
+        <p>${profileData.header.title}</p>
+        <a href="${profileData.header.cvUrl}" class="download-cv" download>Download CV</a>
+    `;
 
-};
+    // Navigation
+    const nav = document.createElement('nav');
+    profileData.navigation.forEach(link => {
+        const a = document.createElement('a');
+        a.href = link.href;
+        a.textContent = link.text;
+        nav.appendChild(a);
+    });
 
-function pageLoad() {
-    includeResources();
-    initialise();
-    reset_effects();
-    enable_effects();
+    // About Section
+    const aboutSection = document.createElement('section');
+    aboutSection.id = 'about';
+    aboutSection.className = 'about';
+    aboutSection.innerHTML = `
+        <h2>About Me</h2>
+        <p>${profileData.about.text}</p>
+    `;
 
-}
+    // Skills Section
+    const skillsSection = document.createElement('section');
+    skillsSection.id = 'skills';
+    skillsSection.className = 'skills';
+    skillsSection.innerHTML = '<h2>Skills</h2>';
 
-function initialise() {
-    window_width = window.innerWidth;
-    refreshTheme();
-    addSwipeListeners(3);
-}
+    profileData.skills.forEach(category => {
+        const categoryDiv = document.createElement('div');
+        categoryDiv.className = 'skill-category';
+        categoryDiv.innerHTML = `<h3>${category.category}</h3><ul></ul>`;
 
-function contentScrolled() {
-    scrollCount++;
-    if (scrollCount > scrollThrottleCount) {
-        enable_effects();
-        scrollCount = 0;
-    }
-}
+        category.skills.forEach(skill => {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <div class="skill-name">${skill.name}</div>
+                <div class="skill-bar"><div style="width: ${skill.level};"></div></div>
+            `;
+            categoryDiv.querySelector('ul').appendChild(li);
+        });
 
-function includeResources() {
-    document.querySelectorAll('div[include-resource]').forEach(copyResourceToElement);
-}
+        skillsSection.appendChild(categoryDiv);
+    });
 
-function copyResourceToElement(element) {
-    let file = element.getAttribute("include-resource");
-    if (file) {
-        const client = new XMLHttpRequest();
-        client.open('GET', file);
-        client.onreadystatechange = function () {
-            element.innerHTML = client.responseText;
-            element.removeAttribute("include-resource");
-            refreshTheme();
-        };
-        client.send();
-    }
-}
+    // Experience Section
+    const experienceSection = document.createElement('section');
+    experienceSection.id = 'experience';
+    experienceSection.className = 'experience';
+    experienceSection.innerHTML = '<h2>Experience</h2>';
 
-function addClassName(selector, className) {
-    document.querySelector(selector).classList.add(className);
-}
+    profileData.experience.forEach(job => {
+        const article = document.createElement('article');
+        article.innerHTML = `
+            <h3>${job.title}</h3>
+            <p>${job.timePeriod}</p>
+            <p>${job.description}</p>
+        `;
+        experienceSection.appendChild(article);
+    });
 
-function removeClassName(selector, className) {
-    document.querySelector(selector).classList.remove(className);
-}
+    // Certifications Section
+    const certificationsSection = document.createElement('section');
+    certificationsSection.id = 'certifications';
+    certificationsSection.className = 'certifications';
+    certificationsSection.innerHTML = '<h2>Certifications</h2><ul></ul>';
 
-function showDetails(experienceNumber) {
-    removeClassName('.experience .card._' + experienceNumber, 'hide');
-    removeClassName('.experience .details._' + experienceNumber, 'hide');
-    addClassName('.experience .card._' + experienceNumber, 'show');
-    addClassName('.experience .card._' + experienceNumber, 'effect-active');
-    addClassName('.experience .details._' + experienceNumber, 'show');
-    disableScrollUsingKeys();
-    configureArrowVisibility(document.querySelector(".details._2 .responsibilities"));
-}
+    profileData.certifications.forEach(cert => {
+        const li = document.createElement('li');
+        li.textContent = `${cert.name} - ${cert.issuer}`;
+        certificationsSection.querySelector('ul').appendChild(li);
+    });
 
-function hideDetails(experienceNumber) {
-    addClassName('.experience .card._' + experienceNumber, 'hide');
-    addClassName('.experience .card._' + experienceNumber, 'effect-active');
-    addClassName('.experience .details._' + experienceNumber, 'hide');
-    removeClassName('.experience .card._' + experienceNumber, 'show');
-    removeClassName('.experience .details._' + experienceNumber, 'show');
-    enableScrollUsingKeys();
-}
+    // Contact Section
+    const contactSection = document.createElement('section');
+    contactSection.id = 'contact';
+    contactSection.className = 'contact';
+    contactSection.innerHTML = `
+        <h2>Contact</h2>
+        <form id="contact-form">
+        <textarea name="message" id="mail_message" placeholder="${profileData.contact.placeholderMessage}"></textarea>
+        <button type="button" onclick="sendEmail()">${profileData.contact.buttonText}</button>
+    </form>
+    `;
 
-function resetDetails(experienceNumber) {
-    removeClassName('.experience .card._' + experienceNumber, 'hide');
-    removeClassName('.experience .details._' + experienceNumber, 'hide');
-    removeClassName('.experience .card._' + experienceNumber, 'show');
-    removeClassName('.experience .details._' + experienceNumber, 'show');
-    enableScrollUsingKeys();
-}
+    // Socials Section
+    const socialsSection = document.createElement('section');
+    socialsSection.id = 'socials';
+    socialsSection.className = 'socials';
+    socialsSection.innerHTML = '<h2>Find Me On</h2>';
 
-function disableScrollUsingKeys() {
-    window.addEventListener('keydown', preventDefaultForScrollKeys, false);
-}
+    profileData.socials.forEach(social => {
+        const a = document.createElement('a');
+        a.href = social.url;
+        a.target = '_blank';
+        a.title = social.platform;
 
-function disableScroll() {
-    disableScrollUsingKeys();
-    window.addEventListener('DOMMouseScroll', preventDefault, false);
-    window.addEventListener('wheel', preventDefault, {passive: false});
-    window.addEventListener('mousewheel', preventDefault, {passive: false});
-    window.addEventListener('touchmove', preventDefault, {passive: false});
-}
+        const img = document.createElement('img');
+        img.src = social.icon;
+        img.alt = social.platform;
 
-function enableScrollUsingKeys() {
-    window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
-}
+        a.appendChild(img);
+        socialsSection.appendChild(a);
+    });
 
-function enableScroll() {
-    enableScrollUsingKeys();
-    window.removeEventListener('DOMMouseScroll', preventDefault, false);
-    window.removeEventListener('wheel', preventDefault, {passive: false});
-    window.removeEventListener('mousewheel', preventDefault, {passive: false});
-    window.removeEventListener('touchmove', preventDefault, {passive: false});
-}
+    // Footer
+    const footer = document.createElement('footer');
+    footer.innerHTML = `<p>© 2024 ${profileData.header.name}. All rights reserved.</p>`;
 
-const scrollSize = window.innerHeight * 0.8;
+    // Append all sections to container
+    const container = document.getElementById('profile-container');
+    container.appendChild(header);
+    container.appendChild(nav);
+    container.appendChild(aboutSection);
+    container.appendChild(experienceSection);
+    container.appendChild(certificationsSection);
+    container.appendChild(skillsSection);
+    container.appendChild(contactSection);
+    container.appendChild(socialsSection);
+    container.appendChild(footer);
 
-function scrollUp(index) {
-    document.querySelector('.details._' + index + ' .responsibilities').scrollBy(0, -scrollSize);
-}
+    // Back to Top Button
+    const backToTopButton = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 200) {
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
+    });
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 
-function scrollDown(index) {
-    document.querySelector(".details._" + index + " .responsibilities").scrollBy(0, scrollSize);
-}
+    // Toggle Skill Categories
+    document.querySelectorAll('.skill-category h3').forEach(header => {
+        header.addEventListener('click', () => {
+            header.parentElement.classList.toggle('active');
+        });
+    });
+});
 
-function preventDefault(e) {
-    e.preventDefault();
-}
 
-function preventDefaultForScrollKeys(e) {
-    if (e.keyCode >= 32 && e.keyCode <= 40) {
-        preventDefault(e);
-        return false;
-    }
-}
+function sendEmail() {
+    console.log("Called SendEmail");
+    // Get form field values
+    const message = document.getElementById('mail_message').value;
 
-function configureArrowVisibility(elem) {
-    const maxTop = (elem.scrollHeight - elem.offsetHeight) * 0.93;
-    const scrollTop = elem.scrollTop;
-    if (scrollTop >= maxTop) {
-        elem.parentElement.children[2].setAttribute('style', 'display: none;')
-    } else {
-        elem.parentElement.children[2].setAttribute('style', 'display: unset;')
-    }
-    if (scrollTop === 0) {
-        elem.parentElement.children[0].setAttribute('style', 'display: none;')
-    } else {
-        elem.parentElement.children[0].setAttribute('style', 'display: unset;')
+    // Construct the mailto URL
+    const subject = `Reaching out via portfolio website`;
+    const body = `Message:%0D%0A${encodeURIComponent(message)}`;
 
-    }
+    // Open the user's default email client
+    window.location.href = `mailto:hi@jafarisharib.com?subject=${encodeURIComponent(subject)}&body=${body}`;
 }

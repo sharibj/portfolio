@@ -1,0 +1,222 @@
+<head>
+    <title>Sharib Jafari Portfolio</title>
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/swipe.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/viewports.css">
+    <link rel="stylesheet" type="text/css" href="css/media-bar.css">
+    <link rel="stylesheet" type="text/css" href="css/themes/light.css">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--    Meta tags for social media-->
+    <!-- Primary Meta Tags -->
+    <title>Sharib Jafari - A complete portfolio</title>
+    <meta name="title" content="Sharib Jafari - A complete portfolio">
+    <meta name="description"
+          content="Software craftsman with 7 years of industry experience and 14 years of coding experience. Full-stack developer with expertise in Java and familiarity with various old and new technologies.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sharibj.github.io/portfolio/">
+    <meta property="og:title" content="Sharib Jafari - A complete portfolio">
+    <meta property="og:description"
+          content="Software craftsman with 7 years of industry experience and 14 years of coding experience. Full-stack developer with expertise in Java and familiarity with various old and new technologies.">
+    <meta property="og:image" content="https://sharibj.github.io/portfolio/resources/img/meta.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sharibj.github.io/portfolio/">
+    <meta property="twitter:title" content="Sharib Jafari - A complete portfolio">
+    <meta property="twitter:description"
+          content="Software craftsman with 7 years of industry experience and 14 years of coding experience. Full-stack developer with expertise in Java and familiarity with various old and new technologies.">
+    <meta property="twitter:image" content="https://sharibj.github.io/portfolio/resources/img/meta.png">
+
+</head>
+<Body>
+<div class="body">
+    <div class="content light" onscroll="contentScrolled()">
+        <label class="switch text-focus-in">
+            <input type="checkbox" onclick="toggleTheme();" id="themeToggle">
+            <span class="slider round"></span>
+            <span class="text"></span>
+        </label>
+        <div class="page _1 column">
+            <div class="header row effect">
+                <img src="resources/img/profile.jpg" alt="Profile Photo" class="text-focus-in">
+                <div class="nametag column">
+                    <div class="lastname color4 text-focus-in">JAFARI</div>
+                    <div class="name color4 text-focus-in">SHARIB</div>
+                    <div class="role color3 text-focus-in">Developer</div>
+                </div>
+            </div>
+            <div class="social-media"
+                 include-resource="resources/html/social-media-bar.html"></div>
+            <div class="introduction column">
+                <div class="title color2">ABOUT ME</div>
+                <div class="subtitle color3">Software craftsman with 8 Years of experience</div>
+                <div class="console color1">
+                    <div class="inner text-focus-in" include-resource="resources/html/console.html"></div>
+                </div>
+            </div>
+        </div>
+        <div class="page _2 column">
+            <div class="experience column">
+                <div class=" title color2">WORK EXPERIENCE</div>
+                <div class="row card-container right">
+                    <div class="card row _1 effect" onclick="showDetails('1')">
+                        <div class="arrow_back_bg"><i class="arrow left"></i></div>
+                        <img alt="Hexad Logo" src="resources/img/hexad.png" class="left">
+                        <div class="column">
+                            <div class="company color2">Hexad GmbH</div>
+                            <div class="role color2">Developer</div>
+                            <div class="meta row row">
+                                <div class="duration color1">02/2020 - Present</div>
+                                <div class="location color1">Berlin, Germany</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details _1">
+                        <div class="responsibilities color1"
+                             include-resource="resources/html/hexad-details.html"></div>
+                        <i class="arrow right" onclick="hideDetails('1')"></i>
+                        <div class="back_bg" onclick="hideDetails('1')"></div>
+                    </div>
+                </div>
+                <div class="row card-container left">
+                    <div class="card row _2 effect" onclick="showDetails('2')">
+                        <div class="column">
+                            <div class="company color2">Coriolis Technologies</div>
+                            <div class="role color2">Member of Technical Staff</div>
+                            <div class="meta row">
+                                <div class="duration color1">09/2015 - 02/2020</div>
+                                <div class="location color1">Pune, India</div>
+                            </div>
+                        </div>
+                        <img alt="Coriolis Logo" src="resources/img/coriolis.png" class="left">
+                        <div class="arrow_back_bg"><i class="arrow right"></i></div>
+                    </div>
+                    <div class="details _2">
+                        <div class="up block" onclick="scrollUp('2')">
+                            <i class="arrow up" onclick="scrollUp('2')"></i>
+                        </div>
+                        <div class="responsibilities color1"
+                             onscroll="configureArrowVisibility(this)"
+                             onresize="configureArrowVisibility(this)"
+                             include-resource="resources/html/coriolis-details.html"></div>
+                        <div class="down block" onclick="scrollDown('2')">
+                            <i class="arrow down" onclick="scrollDown('2')"></i>
+                        </div>
+                        <i class="arrow left" onclick="hideDetails('2')"></i>
+                        <div class="back_bg" onclick="hideDetails('2')"></div>
+                    </div>
+                </div>
+                <div class="row card-container right">
+                    <div class="card row _3 effect" onclick="showDetails('3'); disableScroll()">
+                        <div class="arrow_back_bg"><i class="arrow left"></i></div>
+                        <img alt="Cognizant Logo" src="resources/img/cognizant.png" class="left">
+                        <div class="column">
+                            <div class="company color2">Cognizant Technology</div>
+                            <div class="role color2">Programmer Analyst</div>
+                            <div class="meta row">
+                                <div class="duration color1">08/2013 - 08/2015</div>
+                                <div class="location color1">Kolkata, India</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details _3" onclick="enableScroll()">
+                        <div class="responsibilities color1"
+                             include-resource="resources/html/cognizant-details.html"></div>
+                        <i class="arrow right" onclick="hideDetails('3')"></i>
+                        <div class="back_bg" onclick="hideDetails('3')"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="experience_footer" class="svg_footer" include-resource="resources/svg/working.svg"></div>
+        </div>
+        <div class="page _3 column">
+            <div class=" skills column">
+                <div class="title color2">SKILLS</div>
+                <div>
+                    <div class="skill_bar row effect">
+                        <img alt="Java Logo" class="icon" src="resources/img/java.png">
+                        <div class="column">
+                            <div class="caption row">
+                                <div class="name color4">Java</div>
+                                <div class="percentage color4">90%</div>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-child progress"></div>
+                                <div class="progress-bar-child shrinker timelapse"></div>
+                                <div class="progress-bar-child inverted _90"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill_bar row effect">
+                        <img alt="Kotlin Logo" class="icon" src="resources/img/kotlin.png">
+                        <div class="column">
+                            <div class="caption row">
+                                <div class="name color4">Kotlin</div>
+                                <div class="percentage color4">70%</div>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-child progress"></div>
+                                <div class="progress-bar-child shrinker timelapse"></div>
+                                <div class="progress-bar-child inverted _70"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill_bar row effect">
+                        <img alt="Angular Logo" class="icon" src="resources/img/angular.png">
+                        <div class="column">
+                            <div class="caption row">
+                                <div class="name color4">Angular</div>
+                                <div class="percentage color4">60%</div>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-child progress"></div>
+                                <div class="progress-bar-child shrinker timelapse"></div>
+                                <div class="progress-bar-child inverted _60"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill_bar row effect">
+                        <img alt="Spring Boot Logo" class="icon" src="resources/img/sprinBoot.png">
+                        <div class="column">
+                            <div class="caption row">
+                                <div class="name color4">Spring Boot</div>
+                                <div class="percentage color4">80%</div>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-child progress"></div>
+                                <div class="progress-bar-child shrinker timelapse"></div>
+                                <div class="progress-bar-child inverted _80"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill_bar row effect">
+                        <img alt="TDD Logo" class="icon" src="resources/img/tdd.png">
+                        <div class="column">
+                            <div class="caption row">
+                                <div class="name color4">TDD</div>
+                                <div class="percentage color4">90%</div>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-child progress"></div>
+                                <div class="progress-bar-child shrinker timelapse"></div>
+                                <div class="progress-bar-child inverted _90"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="skills_footer" class="svg_footer" include-resource="resources/svg/activity.svg"></div>
+        </div>
+        <div class="footer"></div>
+    </div>
+</div>
+<div class="wip color4">
+    <span>OPEN IN MOBILE</br>WORK IN PROGRESS</span>
+</div>
+</Body>

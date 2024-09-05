@@ -1,222 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <title>Sharib Jafari Portfolio</title>
-    <script src="js/main.js"></script>
-    <script src="js/theme.js"></script>
-    <script src="js/effects.js"></script>
-    <script src="js/swipe.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+
+    <link rel="stylesheet" type="text/css" href="css/theme.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/viewports.css">
-    <link rel="stylesheet" type="text/css" href="css/media-bar.css">
-    <link rel="stylesheet" type="text/css" href="css/themes/light.css">
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <!--    Meta tags for social media-->
-    <!-- Primary Meta Tags -->
-    <title>Sharib Jafari - A complete portfolio</title>
-    <meta name="title" content="Sharib Jafari - A complete portfolio">
-    <meta name="description"
-          content="Software craftsman with 7 years of industry experience and 14 years of coding experience. Full-stack developer with expertise in Java and familiarity with various old and new technologies.">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sharibj.github.io/portfolio/">
-    <meta property="og:title" content="Sharib Jafari - A complete portfolio">
-    <meta property="og:description"
-          content="Software craftsman with 7 years of industry experience and 14 years of coding experience. Full-stack developer with expertise in Java and familiarity with various old and new technologies.">
-    <meta property="og:image" content="https://sharibj.github.io/portfolio/resources/img/meta.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://sharibj.github.io/portfolio/">
-    <meta property="twitter:title" content="Sharib Jafari - A complete portfolio">
-    <meta property="twitter:description"
-          content="Software craftsman with 7 years of industry experience and 14 years of coding experience. Full-stack developer with expertise in Java and familiarity with various old and new technologies.">
-    <meta property="twitter:image" content="https://sharibj.github.io/portfolio/resources/img/meta.png">
-
+    <script src="js/main.js"></script>
 </head>
-<Body>
-<div class="body">
-    <div class="content light" onscroll="contentScrolled()">
-        <label class="switch text-focus-in">
-            <input type="checkbox" onclick="toggleTheme();" id="themeToggle">
-            <span class="slider round"></span>
-            <span class="text"></span>
-        </label>
-        <div class="page _1 column">
-            <div class="header row effect">
-                <img src="resources/img/profile.jpg" alt="Profile Photo" class="text-focus-in">
-                <div class="nametag column">
-                    <div class="lastname color4 text-focus-in">JAFARI</div>
-                    <div class="name color4 text-focus-in">SHARIB</div>
-                    <div class="role color3 text-focus-in">Developer</div>
-                </div>
-            </div>
-            <div class="social-media"
-                 include-resource="resources/html/social-media-bar.html"></div>
-            <div class="introduction column">
-                <div class="title color2">ABOUT ME</div>
-                <div class="subtitle color3">Software craftsman with 8 Years of experience</div>
-                <div class="console color1">
-                    <div class="inner text-focus-in" include-resource="resources/html/console.html"></div>
-                </div>
-            </div>
-        </div>
-        <div class="page _2 column">
-            <div class="experience column">
-                <div class=" title color2">WORK EXPERIENCE</div>
-                <div class="row card-container right">
-                    <div class="card row _1 effect" onclick="showDetails('1')">
-                        <div class="arrow_back_bg"><i class="arrow left"></i></div>
-                        <img alt="Hexad Logo" src="resources/img/hexad.png" class="left">
-                        <div class="column">
-                            <div class="company color2">Hexad GmbH</div>
-                            <div class="role color2">Developer</div>
-                            <div class="meta row row">
-                                <div class="duration color1">02/2020 - Present</div>
-                                <div class="location color1">Berlin, Germany</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="details _1">
-                        <div class="responsibilities color1"
-                             include-resource="resources/html/hexad-details.html"></div>
-                        <i class="arrow right" onclick="hideDetails('1')"></i>
-                        <div class="back_bg" onclick="hideDetails('1')"></div>
-                    </div>
-                </div>
-                <div class="row card-container left">
-                    <div class="card row _2 effect" onclick="showDetails('2')">
-                        <div class="column">
-                            <div class="company color2">Coriolis Technologies</div>
-                            <div class="role color2">Member of Technical Staff</div>
-                            <div class="meta row">
-                                <div class="duration color1">09/2015 - 02/2020</div>
-                                <div class="location color1">Pune, India</div>
-                            </div>
-                        </div>
-                        <img alt="Coriolis Logo" src="resources/img/coriolis.png" class="left">
-                        <div class="arrow_back_bg"><i class="arrow right"></i></div>
-                    </div>
-                    <div class="details _2">
-                        <div class="up block" onclick="scrollUp('2')">
-                            <i class="arrow up" onclick="scrollUp('2')"></i>
-                        </div>
-                        <div class="responsibilities color1"
-                             onscroll="configureArrowVisibility(this)"
-                             onresize="configureArrowVisibility(this)"
-                             include-resource="resources/html/coriolis-details.html"></div>
-                        <div class="down block" onclick="scrollDown('2')">
-                            <i class="arrow down" onclick="scrollDown('2')"></i>
-                        </div>
-                        <i class="arrow left" onclick="hideDetails('2')"></i>
-                        <div class="back_bg" onclick="hideDetails('2')"></div>
-                    </div>
-                </div>
-                <div class="row card-container right">
-                    <div class="card row _3 effect" onclick="showDetails('3'); disableScroll()">
-                        <div class="arrow_back_bg"><i class="arrow left"></i></div>
-                        <img alt="Cognizant Logo" src="resources/img/cognizant.png" class="left">
-                        <div class="column">
-                            <div class="company color2">Cognizant Technology</div>
-                            <div class="role color2">Programmer Analyst</div>
-                            <div class="meta row">
-                                <div class="duration color1">08/2013 - 08/2015</div>
-                                <div class="location color1">Kolkata, India</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="details _3" onclick="enableScroll()">
-                        <div class="responsibilities color1"
-                             include-resource="resources/html/cognizant-details.html"></div>
-                        <i class="arrow right" onclick="hideDetails('3')"></i>
-                        <div class="back_bg" onclick="hideDetails('3')"></div>
-                    </div>
-                </div>
-            </div>
-            <div id="experience_footer" class="svg_footer" include-resource="resources/svg/working.svg"></div>
-        </div>
-        <div class="page _3 column">
-            <div class=" skills column">
-                <div class="title color2">SKILLS</div>
-                <div>
-                    <div class="skill_bar row effect">
-                        <img alt="Java Logo" class="icon" src="resources/img/java.png">
-                        <div class="column">
-                            <div class="caption row">
-                                <div class="name color4">Java</div>
-                                <div class="percentage color4">90%</div>
-                            </div>
-                            <div class="progress-bar-container">
-                                <div class="progress-bar-child progress"></div>
-                                <div class="progress-bar-child shrinker timelapse"></div>
-                                <div class="progress-bar-child inverted _90"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill_bar row effect">
-                        <img alt="Kotlin Logo" class="icon" src="resources/img/kotlin.png">
-                        <div class="column">
-                            <div class="caption row">
-                                <div class="name color4">Kotlin</div>
-                                <div class="percentage color4">70%</div>
-                            </div>
-                            <div class="progress-bar-container">
-                                <div class="progress-bar-child progress"></div>
-                                <div class="progress-bar-child shrinker timelapse"></div>
-                                <div class="progress-bar-child inverted _70"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill_bar row effect">
-                        <img alt="Angular Logo" class="icon" src="resources/img/angular.png">
-                        <div class="column">
-                            <div class="caption row">
-                                <div class="name color4">Angular</div>
-                                <div class="percentage color4">60%</div>
-                            </div>
-                            <div class="progress-bar-container">
-                                <div class="progress-bar-child progress"></div>
-                                <div class="progress-bar-child shrinker timelapse"></div>
-                                <div class="progress-bar-child inverted _60"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill_bar row effect">
-                        <img alt="Spring Boot Logo" class="icon" src="resources/img/sprinBoot.png">
-                        <div class="column">
-                            <div class="caption row">
-                                <div class="name color4">Spring Boot</div>
-                                <div class="percentage color4">80%</div>
-                            </div>
-                            <div class="progress-bar-container">
-                                <div class="progress-bar-child progress"></div>
-                                <div class="progress-bar-child shrinker timelapse"></div>
-                                <div class="progress-bar-child inverted _80"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill_bar row effect">
-                        <img alt="TDD Logo" class="icon" src="resources/img/tdd.png">
-                        <div class="column">
-                            <div class="caption row">
-                                <div class="name color4">TDD</div>
-                                <div class="percentage color4">90%</div>
-                            </div>
-                            <div class="progress-bar-container">
-                                <div class="progress-bar-child progress"></div>
-                                <div class="progress-bar-child shrinker timelapse"></div>
-                                <div class="progress-bar-child inverted _90"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="skills_footer" class="svg_footer" include-resource="resources/svg/activity.svg"></div>
-        </div>
-        <div class="footer"></div>
+
+<body>
+    <div class="container" id="profile-container">
+        <!-- Dynamic content will be injected here by JavaScript -->
     </div>
-</div>
-<div class="wip color4">
-    <span>OPEN IN MOBILE</br>WORK IN PROGRESS</span>
-</div>
-</Body>
+
+    <!-- Back to Top Button -->
+    <div id="back-to-top">&#8679;</div>
+
+    <!-- JSON Data -->
+    <script id="profile-data" type="application/json">
+    {
+        "header": {
+            "name": "Sharib Jafari",
+            "title": "Software Craftsman",
+            "cvUrl": "data/Sharib_Resume_Sep24.pdf",
+            "profilePicUrl": "https://media.licdn.com/dms/image/v2/C4D03AQGmcv3HZjzq0g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1636669993015?e=1730937600&v=beta&t=r_LcySoSv_g1FdugWPHYA2yxIU0Ae1QGNrhLsXTT8wg"
+        },
+        "navigation": [
+            {"text": "About", "href": "#about"},
+            {"text": "Experience", "href": "#experience"},
+            {"text": "Certifications", "href": "#certifications"},
+            {"text": "Skills", "href": "#skills"},
+            {"text": "Contact", "href": "#contact"},
+            {"text": "Socials", "href": "#socials"}
+        ],
+        "about": {
+            "text": "Sharib is a software craftsman with 10+ years of experience as a consultant, full-stack developer, and solutions architect. He is passionate about Domain Driven Design, Test Driven Development, and Clean Coding. Sharib has worked in diverse domains like Travel & Hospitality, Cloud Security (virtual machines), and Observability (Application Health Monitoring). He has experience with cloud-native applications (microservices) and serverless architectures. Sharib has been a team lead and a mentor. He puts people over processes and believes in servant leadership."
+        },
+        "experience": [
+            {
+                "title": "Centogene - Senior Software Engineer",
+                "timePeriod": "02/2023 - 05/2023",
+                "description": "CENTOGENE is a world leader in the field of genetic diagnostics for rare diseases dedicated to improving patients' lives every day.<br/>In the engagement, Sharib was tasked with creating an event-driven serverless orchestrator to streamline their processes and be compliant. <br/><br/>As a part of this engagement Sharib was responsible for : <br/>&nbsp;&nbsp; Designing and implementing a cloud-native, serverless solution, streamlining the data synchronization process between CRM, ERP, and LIMS systems.<br/>&nbsp;&nbsp; Developing robust and scalable infrastructure from the ground up, leveraging IaC and CI/CD to automate the deployment of changes to the production system.<br/>&nbsp;&nbsp; Defining runbooks to guide the issue resolution process with a list of operational tasks and troubleshooting scenarios covered.<br/>&nbsp;&nbsp; Collaborating with internal and external stakeholders to ensure comprehensive alignment between technical feasibility, business objectives, and stakeholder expectations.<br/>&nbsp;&nbsp; Producing documentation encompassing high-level designs, APIs, and test cases.<br/><br/>Technologies: Python, AWS (API Gateway, AWS Lambda, EventBridge, Step Functions, CloudWatch among others), Terraform, GitLab."
+            },
+            {
+                "title": "Hexad GmbH - Solution Architect / Software Engineer",
+                "timePeriod": "02/2020 -12/2022",
+                "description": "This engagement involved working in the capacity of a polyglot full-stack developer, embedded in a well-balanced team for a health monitoring product for digital labs (Volkswagen)<br/><br/>The responsibilities involved:<br/>&nbsp;&nbsp; Along with the responsibilities of a senior developer, working as a consultant for other projects in need of advice or improvements.<br/>&nbsp;&nbsp; Working with teams to improve their processes and architecture.<br/>&nbsp;&nbsp; Taking part in recruitment and mentorship.<br/>&nbsp;&nbsp; Implementing new features as a Full-Stack developer.<br/>&nbsp;&nbsp; Maintaining the CI/CD pipeline.<br/>&nbsp;&nbsp; Brainstorming for and contributing to new product ideas.<br/>&nbsp;&nbsp; Working as part of a balanced team following XP.<br/><br/>Technologies: Kotlin, Typescript, Angular, Spring Boot, PostgreSQL, Redis, Concourse CI, GitHub Actions, Cloud Foundry, Helm, Kubernetes, Shell Scripting, AWS (SQS, SNS, SES, S3), Azure (Service Bus, Key vault), Newrelic."
+            }
+        ],
+        "certifications": [
+            {"name": "AWS Certified Solutions Architect - Associate", "issuer": "AWS, Amazon"},
+            {"name": "AWS Certified Cloud Practitioner", "issuer": "AWS,    Amazon"},
+            {"name": "Green Software for Practitioners", "issuer": "Green Software Foundation"}
+        ],
+        "skills": [
+            {
+                "category": "Programming Languages",
+                "skills": [
+                    {"name": "Java", "level": "100%"},
+                    {"name": "Kotlin", "level": "95%"},
+                    {"name": "TypeScript", "level": "85%"},
+                    {"name": "Python", "level": "85%"}
+                ]
+            },
+            {
+                "category": "Databases",
+                "skills": [
+                    {"name": "MySQL", "level": "100%"},
+                    {"name": "PostgreSQL", "level": "95%"},
+                    {"name": "DynamoDB", "level": "90%"},
+                    {"name": "MongoDB", "level": "85%"}
+                ]
+            },
+            {
+                "category": "Others",
+                "skills": [
+                    {"name": "Terraform", "level": "100%"},
+                    {"name": "GitHub Actions / GitLab CI/CD", "level": "100%"},
+                    {"name": "Kubernetes", "level": "80%"},
+                    {"name": "Angular / React", "level": "80%"}
+                ]
+            }
+        ],
+        "contact": {
+            "placeholderName": "Your Name",
+            "placeholderEmail": "Your Email",
+            "placeholderMessage": "Your Message",
+            "buttonText": "Send Message"
+        },
+        "socials": [
+            {"platform": "LinkedIn", "url": "https://www.linkedin.com/in/sjafari/", "icon": "https://cdn-icons-png.flaticon.com/512/174/174857.png"},
+            {"platform": "GitHub", "url": "https://github.com/sharibj", "icon": "https://cdn-icons-png.flaticon.com/512/733/733609.png"},
+            {"platform": "Twitter", "url": "https://x.com/SharibJafari", "icon": "https://cdn-icons-png.flaticon.com/512/733/733579.png"}
+        ]
+    }
+    </script>
+
+</body>
+
+</html>

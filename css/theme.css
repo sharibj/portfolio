@@ -1,0 +1,73 @@
+/* :root {
+    --primary-color: #233142;
+    --secondary-color: #455d7a;
+    --background-color: #e3e3e3;
+    --text-color: #f95959;
+    --light-text-color: #555;
+    --card-background: #fff;
+    --skill-bar-background: #e0e0e0;
+    --scroll-btn-color: ##f95959;
+} */
+
+
+/* Warm & Cozy */
+/* :root {
+    --primary-color: #ff6f61;
+    --secondary-color: #ffb88c;
+    --background-color: #f4f1ea;
+    --text-color: #333333;
+    --light-text-color: #555555;
+    --card-background: #ffffff;
+    --skill-bar-background: #ffe6cc;
+    --scroll-btn-color: #ff6f61;
+} */
+
+
+/* Cool & Modern */
+/* :root {
+    --primary-color: #0077b6;
+    --secondary-color: #90e0ef;
+    --background-color: #f0f8ff;
+    --text-color: #03045e;
+    --light-text-color: #4a4a4a;
+    --card-background: #ffffff;
+    --skill-bar-background: #dbe9f4;
+    --scroll-btn-color: #0077b6;
+} */
+
+
+/* Earthy & Minimal */
+/* :root {
+    --primary-color: #6b4226;
+    --secondary-color: #d8a47f;
+    --background-color: #f4f4f4;
+    --text-color: #2f2f2f;
+    --light-text-color: #6e6e6e;
+    --card-background: #ffffff;
+    --skill-bar-background: #e0c9a6;
+    --scroll-btn-color: #6b4226;
+} */
+
+/* Quirky */
+:root {
+    --primary-color: #ff007f;
+    --secondary-color: #ffe100;
+    --background-color: #f5f7fa;
+    --text-color: #343a40;
+    --light-text-color: #6c757d;
+    --card-background: #ffffff;
+    --skill-bar-background: #c0fdfb;
+    --scroll-btn-color: #ff007f;
+}
+
+/* Greyscale */
+/* :root {
+    --primary-color: #4a4a4a;
+    --secondary-color: #6e6e6e;
+    --background-color: #f8f8f8;
+    --text-color: #1a1a1a;
+    --light-text-color: #888888;
+    --card-background: #ffffff;
+    --skill-bar-background: #d9d9d9;
+    --scroll-btn-color: #4a4a4a;
+} */
